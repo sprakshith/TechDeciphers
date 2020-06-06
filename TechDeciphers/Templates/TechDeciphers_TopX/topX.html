@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Top X</title>
+
+    <!-- Common Imports Like Bootstrap and Jquery -->
+    {% include "CommonTemplates/CommonImports/allImports.html" %}
+
+    <!-- Link to My Script and CSS -->
+    <link rel="stylesheet" href="{% static "TechDeciphers_TopX/Css/main.css" %}">
+    <script src="{% static "TechDeciphers_TopX/Js/script.js" %}"></script>
+
+  </head>
+  <body>
+
+    <!-- Navigation Bar -->
+    {% include "CommonTemplates/NavigationBar/navigationBar.html" %}
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9">
+          <hr>
+          {% for count in times2 %}
+          <div class="topXCard">
+            <div class="row">
+              <div class="col-lg-3">
+                <div class="topXCardImg">
+                  <img src="{% static "TechDeciphers_Gadgets/Static_Files/realme.jpg" %}" alt="Oops Sorry...!">
+                </div>
+              </div>
+              <div class="col-lg-9">
+                <div class="topXCardBody">
+                  <p id='topXTopicName'>Top 5 Budget Cameras for YouTube recording</p>
+                  <p id='categoryOfTopX'>Gadgets</p>
+                  <span id='author'>Akshith Jay</span><span id='dateOfUpload'>01 June 2020</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          {% endfor %}
+        </div>
+        <div class="col-lg-3">
+          {% for count in times %}
+
+          <!-- Carousel -->
+          {% include "CommonTemplates/Carousel/verticleCarousel.html" %}
+
+          {% endfor %}
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Footer -->
+    {% include "CommonTemplates/Footer/techDeciphersFooter.html" %}
+
+  </body>
+
+</html>

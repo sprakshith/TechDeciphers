@@ -1,0 +1,48 @@
+.topXCard {
+  position: relative;
+}
+
+.topXCard .topXCardImg img {
+  width: 180px;
+  height: 150px;
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+.topXCard .col-lg-9 {
+  position: absolute;
+  left: 180px;
+}
+
+#topXTopicName {
+  font-size: 28px;
+  cursor: pointer;
+}
+
+#topXTopicName:hover {
+  text-decoration: underline;
+}
+
+#author {
+  position: absolute;
+  font-size: 20px;
+  top: 125px;
+  left: 20px;
+  color: grey;
+}
+
+#categoryOfTopX {
+  position: absolute;
+  font-size: 20px;
+  top: 65px;
+  left: 20px;
+  color: red;
+}
+
+#dateOfUpload {
+  position: absolute;
+  font-size: 20px;
+  top: 125px;
+  right: -48px;
+  color: grey;
+}

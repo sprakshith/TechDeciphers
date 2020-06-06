@@ -1,0 +1,76 @@
+.footer .row .col-lg-3 img {
+  height: 200px;
+  width: 360px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.footer {
+  background-color: #000020;
+  color: #c1c9c1;
+  padding: 15px;
+}
+
+.footer .row .col-lg-3 {
+  position: relative;
+}
+
+#socialMediaLinks {
+  font-size: 24px;
+  color: #c1c9c1;
+  text-align: center;
+  border-left: 2px solid white;
+}
+
+#socialMediaLinks a {
+  color: #c1c9c1;
+}
+
+#socialMediaLinks a:hover {
+  color:#17a2b8;
+  cursor:pointer;
+}
+
+#footer-right-3 {
+  font-size: 18px;
+  border-left: 2px solid white;
+}
+
+#footer-right-3 a {
+  color: #c1c9c1;
+}
+
+#footer-right-3 a:hover {
+  color:#17a2b8;
+  cursor:pointer;
+}
+
+#stayConnected .form-control {
+  border: 0px;
+  background-color : #cce6e9;
+  color: black;
+}
+
+#stayConnected .form-control:focus {
+  background-color : white;
+}
+
+#footer-right-3 button.btn-light {
+  background-color: #c1c9c1;
+  border: 0px;
+}
+
+#footer-right-3 button.btn-light:hover {
+  border: 1px solid red;
+}
+
+#unknownForNow {
+  padding-left: 0px;
+  border-left: 2px solid white;
+}
+
+.updateMeBtn {
+  float:right;
+  font-size: 12px;
+}

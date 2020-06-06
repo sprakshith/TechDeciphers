@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+
+<!-- Navigation Bar -->
+<div class='jayNavigationBar'>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="{% url 'TechDeciphers_Home:index' %}">TechDeciphers</a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" href="{% url 'TechDeciphers_Gadgets:index' %}">Gadgets</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'TechDeciphers_News:index' %}">News</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'TechDeciphers_TopX:index' %}">Top X</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'TechDeciphers_Leaks:index' %}">Leaks</a></li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2 navigationSearchBar" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-info my-2 my-sm-0 navigationSearchBtn" type="submit">Search</button>
+          </form>
+      </div>
+  </nav>
+</div>
+
+<!-- Css Link For Navigation Bar -->
+<link rel="stylesheet" href="{% static "CommonTemplates/NavigationBar/navigationBar.css" %}">

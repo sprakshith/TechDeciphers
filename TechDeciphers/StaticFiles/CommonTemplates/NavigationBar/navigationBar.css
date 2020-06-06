@@ -1,0 +1,30 @@
+.jayNavigationBar .navbar .navbar-brand {
+  font-size: 25px;
+}
+
+.jayNavigationBar .navbar .navbar-brand:hover {
+  color:#17a2b8 !important;
+}
+
+.jayNavigationBar .navbar ul.navbar-nav li a {
+    font-size: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.jayNavigationBar .navbar ul.navbar-nav li a:hover {
+  color:#17a2b8 !important;
+}
+
+.bg-dark {
+  background-color: #000020 !important;
+}
+
+.navigationSearchBar {
+  width: 280px !important;
+  background-color: #cce6e9;
+}
+
+.navigationSearchBtn {
+  width: 125px;
+}
