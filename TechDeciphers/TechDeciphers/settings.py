@@ -26,7 +26,7 @@ SECRET_KEY = 'd68lujn#97^#eg727w_bvdj((+(7x8@wvhhv5qt_z6)f6s*wo@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['sprakshith.pythonanywhere.com']
 
 
 # Application definition
