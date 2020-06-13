@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Gadgets</title>
+
+    <!-- Common Imports Like Bootstrap and Jquery -->
+    {% include "CommonTemplates/CommonImports/allImports.html" %}
+
+    <!-- Link to My Script and CSS -->
+    <link rel="stylesheet" href="{% static "TechDeciphers_Gadgets/Css/main.css" %}">
+    <script src="{% static "TechDeciphers_Gadgets/Js/main.js" %}"></script>
+
+  </head>
+  <body style='background-color: #f5f5f5'>
+
+    <!-- Navigation Bar -->
+    {% include "CommonTemplates/NavigationBar/navigationBar.html" %}
+
+
+    <div class="container">
+      <!-- Main Body Starts -->
+      <div class="row">
+        <div class="col-lg-9">
+          <div class="row">
+
+            {% if gadgetsList %}
+              {% for gadget in gadgetsList %}
+                <div class="col-lg-4">
+                  <div class="card">
+                    {% if gadget.gadgetImage.url %}
+                      <img class="card-img-top" src="{{ gadget.gadgetImage.url }}" alt="Card image cap">
+                    {% else %}
+                      <img class="card-img-top" src="" alt="Sorry Photo Not Available">
+                    {% endif %}
+                    <div class="card-body">
+                      <h5 class="card-title">{{ gadget.heading }}</h5>
+                      <p class="card-text">{{gadget.miniContent}}</p>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+            {% endif %}
+
+          </div>
+        </div>
+
+        <div class="col-lg-3">
+          {% for count in times %}
+
+          <!-- Carousel -->
+          {% include "CommonTemplates/Carousel/verticleCarousel.html" %}
+
+          {% endfor %}
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Footer -->
+    {% include "CommonTemplates/Footer/techDeciphersFooter.html" %}
+
+  </body>
+</html>

@@ -1,3 +1,4 @@
 from django.contrib import admin
+from TechDeciphers_Gadgets.models import Gadgets
 
-# Register your models here.
+admin.site.register(Gadgets)

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Gadgets</title>
+
+    <!-- Common Imports Like Bootstrap and Jquery -->
+    {% include "CommonTemplates/CommonImports/allImports.html" %}
+
+    <!-- Link to My Script and CSS -->
+    <link rel="stylesheet" href="{% static "TechDeciphers_Gadgets/Css/main.css" %}">
+    <script src="{% static "TechDeciphers_Gadgets/Js/main.js" %}"></script>
+
+  </head>
+  <body style='background-color: #f5f5f5'>
+
+    <!-- Navigation Bar -->
+    {% include "CommonTemplates/NavigationBar/navigationBar.html" %}
+
+
+    <div class="container">
+      <!-- Main Body Starts -->
+      <div class="row">
+        <div class="col-lg-9">
+
+          <form action="" class="gadget-form-class" method="POST">
+            {% csrf_token %}
+            <p><label for="id_heading">Gadget Name:</label>
+            {{form.heading}}</p>
+
+            <p><label for="id_miniHeading">Mini Heading:</label>
+            {{form.miniHeading}}</p>
+
+            <p><label for="id_typeOfGadget">Type of Gadget:</label>
+            {{form.typeOfGadget}}</p>
+
+            <p><label for="id_miniContent">Mini Content:</label>
+            {{form.miniContent}}</p>
+
+            <p><label for="id_completeContent">Content:</label>
+            {{form.completeContent}}</p>
+
+            <p><label for="id_gadetImage">Upload Image:</label>
+            {{form.gadgetImage}}</p>
+
+            <p><label for="id_postAuthor">Author:</label>
+            {{form.postAuthor}}</p>
+
+            <p><label for="id_postPublishDate">Publish Date:</label>
+            {{form.postPublishDate}}</p>
+
+            <p id="gadgetsFormButtons"> <button type="button" class="btn btn-outline-info my-2 my-sm-0" id="previewGadgetPost">Preview Post</button> <button type="submit" class="btn btn-outline-info my-2 my-sm-0" id="uploadGadgetPost">Upload Post</button> </p>
+          </form>
+
+        </div>
+
+        <div class="col-lg-3">
+          {% for count in times %}
+
+          <!-- Carousel -->
+          {% include "CommonTemplates/Carousel/verticleCarousel.html" %}
+
+          {% endfor %}
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Footer -->
+    {% include "CommonTemplates/Footer/techDeciphersFooter.html" %}
+
+  </body>
+  <style>
+
+  .gadget-form-class {
+    margin-top: 15px;
+  }
+
+  .form-control {
+    margin-bottom: 10px;
+  }
+
+  #gadgetsFormButtons {
+    float: right;
+  }
+
+  #previewGadgetPost {
+    margin-right: 5px;
+  }
+
+  #uploadGadgetPost {
+    margin-left: 5px;
+  }
+
+  </style>
+
+</html>
