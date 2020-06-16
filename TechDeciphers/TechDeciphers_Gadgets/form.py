@@ -13,5 +13,6 @@ class GadgetForm(forms.ModelForm):
             'miniHeading' : forms.TextInput(attrs = {'class' : 'form-control'}),
             'miniContent' : forms.Textarea(attrs = {'class' : 'form-control', 'rows' : '6'}),
             'completeContent' : forms.Textarea(attrs = {'class' : 'form-control', 'rows' : '28'}),
-            'postAuthor' : forms.TextInput(attrs = {'class' : 'form-control'})
+            'postAuthor' : forms.TextInput(attrs = {'class' : 'form-control'}),
+            'postPublishDate' : forms.TextInput(attrs = {'class' : 'form-control'})
         }
