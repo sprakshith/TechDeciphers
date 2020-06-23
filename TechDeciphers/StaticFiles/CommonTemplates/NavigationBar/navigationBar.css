@@ -1,5 +1,9 @@
 .jayNavigationBar .navbar .navbar-brand {
-  font-size: 25px;
+  font-size: 140%;
+}
+
+.jayNavigationBar nav.navbar {
+  width: 100%;
 }
 
 .jayNavigationBar .navbar .navbar-brand:hover {
@@ -7,9 +11,9 @@
 }
 
 .jayNavigationBar .navbar ul.navbar-nav li a {
-    font-size: 20px;
-    margin-left: 5px;
-    margin-right: 5px;
+  font-size: 120%;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .jayNavigationBar .navbar ul.navbar-nav li a:hover {
@@ -27,4 +31,48 @@
 
 .navigationSearchBtn {
   width: 125px;
+}
+
+@media only screen and (max-width: 1079px) {
+
+  .jayNavigationBar {
+    display: none;
+  }
+
+  .jayHamburgerMenu {
+    display : block !important;
+  }
+
+  /* For Hamburger Menu */
+
+  .topnav {
+    overflow: hidden;
+    background-color: #000020;
+    position: relative;
+  }
+
+  .topnav #myLinks {
+    display: none;
+  }
+
+  .topnav a {
+    color: white;
+    padding: 8px 14px;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+  }
+
+  .topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav a:hover {
+    color:#17a2b8;
+  }
+
 }
