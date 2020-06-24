@@ -23,16 +23,17 @@
 <!-- Hamburger Menu   -->
 <div class='jayHamburgerMenu' style="display : none">
   <div class="topnav">
-    <a href="{% url 'TechDeciphers_Home:index' %}" class="active">TechDeciphers</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="javascript:void(0);" class="active"></a>
     <div id="myLinks">
+      <a href="{% url 'TechDeciphers_Home:index' %}">TechDeciphers</a>
       <a href="{% url 'TechDeciphers_Gadgets:index' %}">Gadgets</a>
       <a href="{% url 'TechDeciphers_News:index' %}">News</a>
       <a href="{% url 'TechDeciphers_TopX:index' %}">Top X</a>
       <a href="{% url 'TechDeciphers_Leaks:index' %}">Leaks</a>
     </div>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="fa fa-bars"></i>
-    </a>
   </div>
 </div>
 
