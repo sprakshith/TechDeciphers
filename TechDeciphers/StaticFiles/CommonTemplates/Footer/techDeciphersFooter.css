@@ -84,15 +84,21 @@
   .forSmallScreen {
     text-align: center;
     display: block !important;
-    height: 50px;
+    height: 72px;
   }
 
   .forSmallScreen a{
     color: white;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   .forSmallScreen a:hover {
     color:#17a2b8;
+  }
+
+  #copyrightId {
+    font-size: 10px;
   }
 
 }
