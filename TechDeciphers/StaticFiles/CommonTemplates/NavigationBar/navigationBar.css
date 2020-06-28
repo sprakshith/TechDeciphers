@@ -79,4 +79,15 @@
     color:#17a2b8;
   }
 
+  .companyHeading{
+      position: absolute;
+      color: white;
+      top: 0%;
+      left: 30%;
+  }
+
+  .companyHeading a:hover {
+    color:#17a2b8;
+  }
+
 }
