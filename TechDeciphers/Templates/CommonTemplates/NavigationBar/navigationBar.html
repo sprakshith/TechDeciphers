@@ -26,7 +26,7 @@
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
       <i class="fa fa-bars"></i>
     </a>
-    <a href="javascript:void(0);" class="active"></a>
+    <a href="{% url 'TechDeciphers_Home:index' %}" class="active" id='techDeciphersHeading'>TechDeciphers</a>
     <div id="myLinks">
       <a href="{% url 'TechDeciphers_Gadgets:index' %}">Gadgets</a>
       <a href="{% url 'TechDeciphers_News:index' %}">News</a>
@@ -35,9 +35,9 @@
       <a href="#">About Us</a>
     </div>
   </div>
-  <div class="companyHeading">
+  <!-- <div class="companyHeading">
     <a href="{% url 'TechDeciphers_Home:index' %}">TechDeciphers</a>
-  </div>
+  </div> -->
 </div>
 
 <!-- Css Link For Navigation Bar -->
