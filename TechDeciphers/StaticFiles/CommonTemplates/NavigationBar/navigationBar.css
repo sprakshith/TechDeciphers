@@ -80,10 +80,14 @@
   }
 
   .companyHeading{
-      position: absolute;
-      color: white;
-      top: 0%;
-      left: 30%;
+    position: absolute;
+    color: white;
+    top: 1%;
+    left: 33%;
+  }
+
+  .companyHeading a{
+    color: white;
   }
 
   .companyHeading a:hover {
