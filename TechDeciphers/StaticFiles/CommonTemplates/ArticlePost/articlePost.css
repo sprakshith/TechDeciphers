@@ -56,3 +56,20 @@
 .carousel-item h5, .carousel-item p {
   text-align: center;
 }
+
+@media only screen and (max-width: 1079px) {
+
+  .articleImage img {
+    width: 100%;
+    height: 100%;
+  }
+
+  #postDetails {
+    font-size: 10px;
+  }
+
+  #corouselId {
+    display: none;
+  }
+
+}

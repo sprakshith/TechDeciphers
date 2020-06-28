@@ -21,3 +21,11 @@
 .row .col-lg-9 .row .col-lg-4 .card:hover {
   box-shadow: 0px 0px 8px 1px cadetblue;
 }
+
+@media only screen and (max-width: 1079px) {
+
+  #corouselId {
+    display: none;
+  }
+
+}
