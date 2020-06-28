@@ -2,9 +2,7 @@
 {% load static %}
 
 <!-- Footer -->
-<div class="footer">
-
-  <div class="forLargeScreen">
+<div class="footer forLargeScreen">
 
     <div class="row">
       <div class="col-lg-3">
@@ -33,8 +31,10 @@
       </div>
     </div>
 
-  </div>
+</div>
 
+<div class="footer forSmallScreen" style='display:none'>
+  <p> <img src="{% static "CommonTemplates/Footer/TechDeciphersLogo.png" %}" alt="" style="width: 5%;"> <a href="{% url 'TechDeciphers_Home:index' %}">TechDeciphers</a> </p>
 </div>
 
 <!-- Css Link For Footer -->
