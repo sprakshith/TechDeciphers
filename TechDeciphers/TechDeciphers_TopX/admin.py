@@ -1,3 +1,4 @@
 from django.contrib import admin
+from TechDeciphers_TopX.models import TopX
 
-# Register your models here.
+admin.site.register(TopX)

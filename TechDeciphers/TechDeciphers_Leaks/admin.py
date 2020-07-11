@@ -1,3 +1,4 @@
 from django.contrib import admin
+from TechDeciphers_Leaks.models import Leaks
 
-# Register your models here.
+admin.site.register(Leaks)
