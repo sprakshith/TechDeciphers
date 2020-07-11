@@ -3,13 +3,18 @@ from TechDeciphers_Gadgets.models import Gadgets
 from TechDeciphers_Gadgets.form import GadgetForm
 
 
-def index(request):
-    return render(request, 'TechDeciphers_Gadgets/index.html', {'times' : list(range(4))})
+# def index(request):
+#     return render(request, 'TechDeciphers_Gadgets/index.html', {'times' : list(range(4))})
 
-def gadgetsTry(request):
+def index(request):
     gadgetsList = Gadgets.objects.all().order_by('-postPublishDate')
     gadgetsDictionary = {'gadgetsList' : gadgetsList, 'times' : list(range(4))}
     return render(request, 'TechDeciphers_Gadgets/gadgetTry.html', gadgetsDictionary)
+
+# def gadgetsTry(request):
+#     gadgetsList = Gadgets.objects.all().order_by('-postPublishDate')
+#     gadgetsDictionary = {'gadgetsList' : gadgetsList, 'times' : list(range(4))}
+#     return render(request, 'TechDeciphers_Gadgets/gadgetTry.html', gadgetsDictionary)
 
 def gadgetsForm(request):
     form = GadgetForm()

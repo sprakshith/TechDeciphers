@@ -30,11 +30,7 @@
               {% for gadget in gadgetsList %}
                 <div class="col-lg-4">
                   <div class="card">
-                    {% if gadget.gadgetImage.url %}
                       <img class="card-img-top" src="{{ gadget.gadgetImage.url }}" alt="Card image cap">
-                    {% else %}
-                      <img class="card-img-top" src="" alt="Sorry Photo Not Available">
-                    {% endif %}
                     <div class="card-body">
                       <h5 class="card-title">{{ gadget.heading }}</h5>
                       <p class="card-text">{{gadget.miniContent}}</p>

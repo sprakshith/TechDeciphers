@@ -1,48 +1,52 @@
-.topXCard {
-  position: relative;
-}
-
-.topXCard .topXCardImg img {
-  width: 180px;
-  height: 150px;
-  border-radius: 10%;
-  cursor: pointer;
-}
-
-.topXCard .col-lg-9 {
+.card .row .col-lg-4 img {
+  height: 130px;
+  width: 140px;
   position: absolute;
-  left: 180px;
-}
-
-#topXTopicName {
-  font-size: 28px;
-  cursor: pointer;
-}
-
-#topXTopicName:hover {
-  text-decoration: underline;
-}
-
-#author {
-  position: absolute;
-  font-size: 20px;
-  top: 125px;
+  top: 8px;
   left: 20px;
-  color: grey;
 }
 
-#categoryOfTopX {
-  position: absolute;
-  font-size: 20px;
-  top: 65px;
-  left: 20px;
-  color: red;
+.col-sm-6 .card {
+    background-color: #f5f5f5;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-top : 0.5px solid;
+    border-bottom : 0.5px solid;
+    border-right: 0px;
+    border-left: 0px;
+    cursor: pointer;
 }
 
-#dateOfUpload {
-  position: absolute;
-  font-size: 20px;
-  top: 125px;
-  right: -48px;
-  color: grey;
+.col-sm-6 .card:hover {
+    box-shadow: 0px 0px 8px 1px cadetblue;
+}
+
+.col-lg-8 .card-body {
+    padding-top: 5px;
+}
+
+.row .col-lg-5 img {
+  height: 210px;
+}
+
+.col-lg-8 .card-body .card-text {
+   margin-bottom: 12px;
+
+ }
+
+.articlePublishDetails {
+  font-size: 14px;
+}
+
+.articleAuthor {
+  float: left;
+}
+
+.publishDate {
+  float: right;
+}
+
+.row span.col-lg-6 {
+  font-size: 70px;
+  text-align: center;
 }
