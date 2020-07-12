@@ -16,7 +16,6 @@ def index(request):
 #     return JsonResponse({})
 
 def getArticlePostContents(request):
-    print("Came Inside Get Article Contents");
     articleId = request.POST.get('articlePrimaryId', None)
     myArticle = News.objects.filter(newsId = articleId)[0]
     myArticleContents = {
