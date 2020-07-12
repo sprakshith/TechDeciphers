@@ -28,7 +28,7 @@
               {% for leak in leaksList %}
                 <div class="col-sm-6">
                   <div class="card">
-                    <div class="row">
+                    <div class="row" onclick='openThisArticle("{{leak.leakId}}")'>
                       <div class="col-lg-4">
                         <img class="card-img-top" src="{{ leak.leakImage.url }}" alt="Card image cap">
                       </div>
@@ -48,6 +48,11 @@
 
           </div>
         </div>
+
+        <form action="getArticlePostContents/" id='getArticlePostContents' method="POST">
+          {% csrf_token %}
+          <input type="hidden" id='articlePrimaryId' name="articlePrimaryId" value="">
+        </form>
 
         <div class="col-lg-3 col-sm-3">
 
@@ -69,3 +74,14 @@
 
   </body>
 </html>
+
+<script>
+
+function openThisArticle(articleId) {
+
+  $('#articlePrimaryId').val(articleId);
+  $('#getArticlePostContents').submit();
+
+}
+
+</script>

@@ -22,37 +22,29 @@
       <div class="row">
 
         <div class="col-lg-9">
-
+        {% if myArticleContents %}
           <div class="articleContainer">
             <div class="articleHead">
-              <h1 id='postTitle'>OnePlus 8 Onix Black 8GB Ram</h1>
-              <h6>"The Oneplus 8 series was scheduled for May 29, but due some unknown circumstances it has been delayed"</h6>
+              <h1 id='postTitle'>{{ myArticleContents.heading }}</h1>
+              <h6>"{{ myArticleContents.miniHeading }}"</h6>
               <hr>
-              <p id='postDetails'>by <span id='articleAuthor'>Akshith Jay</span> <span id='postedDate1'>Posted on <span id=postedDate2>May 12 2020</span> </span> </p>
+              <p id='postDetails'>by <span id='articleAuthor'>{{ myArticleContents.postAuthor }}</span> <span id='postedDate1'>Posted on <span id=postedDate2>{{ myArticleContents.postPublishDate }}</span> </span> </p>
               <hr>
             </div>
 
             <div class="articleImage">
-                  <img src="{% static "TechDeciphers_Gadgets/Static_Files/oneplus8.jpg" %}" alt="Oops, Sorry..!">
+                  <img src="{{ myArticleContents.articleImage.url }}" alt="Oops, Sorry..!">
             </div>
 
             <div class="articleContent">
               <hr>
-              <p>
-                The OnePlus 8 and OnePlus 8 Pro were unveiled on April 14, 2020, and released on April 21 in Europe and April 29 in the United States. The 8 Pro is the first OnePlus phone to have wireless charging (Warp Charge 30W). All 8 Pro models have water resistance, although for the 8 it is present only on carrier models. The 8 and 8 Pro have a circular cutout in the upper left-hand corner of the display for the front-facing camera. This was necessary to achieve the IP68 rating, as the pop-up camera on the 7 Pro and 7T Pro did not allow for water resistance. Like the 7T series, both use Fluid AMOLED displays with HDR10+ support. However, a curved display is now used on both phones, whereas the 7T had a flat display and the 7T Pro had a curved display. The 8 has a 6.55-inch 1080p 20:9 screen with a 90 Hz refresh rate, while the 8 Pro has a larger 6.78-inch 1440p 19.8:9 screen with a 120 Hz refresh rate. The 8 Pro is one of the first smartphones able to display 1 billion colors using a 30-bit panel.
-              </p>
-              <p>
-                Both phones are powered by the Qualcomm Snapdragon 865 processor and Adreno 650 GPU. The battery capacity has been increased to 4300 mAh on the 8 and 4510 mAh on the 8 Pro. Storage and RAM options are identical between the two, with 8 or 12 GB of RAM and 128 or 256 GB of non-expandable UFS 3.0 storage. The 8 has LPDDR4X RAM while the 8 Pro has faster, more efficient LPDDR5 RAM. The camera system has been changed to further differentiate the 8 and 8 Pro. The 8's camera array consists of a 48 MP wide sensor, a 16 MP ultrawide sensor, and a 2 MP macro sensor, while the 8 Pro's camera array consists of a 48 MP wide sensor, a 48 MP ultrawide sensor and an 8 MP telephoto sensor, with an additional 5 MP "Color Filter Camera" that enables one- or two- color filters within the standard shooting mode.
-              </p>
-              <p>
-                On 19 May, OnePlus announced that they would temporarily disable the colour filter camera on the OnePlus 8 Pro in China with an upcoming software update, for creating privacy concerns online.[61][62] Unlike the 7T, the 8 does not have a telephoto camera or autofocus on the ultrawide camera, which are now exclusive to the 8 Pro. The front camera on both uses a 16 MP sensor. Along with facial recognition, the optical in-display fingerprint scanner is carried over from the 7 series and 7T series. Both are available in Onyx Black (glossy) and Glacial Green (matte), while the 8 Pro has its own Ultramarine Blue (matte) finish. The 8 has two additional colors, a Polar Silver (matte) finish exclusive to the Verizon model and an Interstellar Glow (glossy) finish exclusive to the T-Mobile model. Like the 7T series, they ship with Android 10 and OxygenOS 10.0 pre-installed.
-              </p>
+                <p>{{ myArticleContents.completeContent }}</p>
               <hr>
               <h6> Incase you are Interested : <a href="#">Google</a>, <a href="#">Android</a>, <a href="#">Iphone 11</a>, <a href="#">Bushy Brow</a>.</h6>
               <hr>
             </div>
           </div>
-
+        {% endif %}
         </div>
 
         <div class="col-lg-3" id="corouselId">

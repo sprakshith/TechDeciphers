@@ -5,7 +5,6 @@ app_name = 'TechDeciphers_Gadgets'
 
 urlpatterns = [
     path('', views.index, name='index'),
-    # path('gadgetsTry/', views.gadgetsTry, name='gadgetsTry'),
     path('gadgetsForm/', views.gadgetsForm, name='gadgetsForm'),
-    path('gadgetsArticlePost/', views.gadgetsArticlePost, name='gadgetsArticlePost')
+    path('getArticlePostContents/', views.getArticlePostContents, name='getArticlePostContents')
 ]

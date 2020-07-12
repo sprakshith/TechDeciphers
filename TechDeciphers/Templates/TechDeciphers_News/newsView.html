@@ -9,8 +9,8 @@
     {% include "CommonTemplates/CommonImports/allImports.html" %}
 
     <!-- Link to My Script and CSS -->
-    <link rel="stylesheet" href="{% static "TechDeciphers_Leaks/Css/main.css" %}">
-    <script src="{% static "TechDeciphers_Leaks/Js/script.js" %}"></script>
+    <link rel="stylesheet" href="{% static "TechDeciphers_News/Css/main.css" %}">
+    <script src="{% static "TechDeciphers_News/Js/script.js" %}"></script>
 
   </head>
   <body>
@@ -23,12 +23,11 @@
       <div class="row">
         <div class="col-lg-9 col-sm-9">
           <div class="row">
-
             {% if newsList %}
               {% for news in newsList %}
                 <div class="col-sm-6">
                   <div class="card">
-                    <div class="row">
+                    <div class="row" onclick='openThisArticle("{{news.newsId}}")'>
                       <div class="col-lg-4">
                         <img class="card-img-top" src="{{ news.newsImage.url }}" alt="Card image cap">
                       </div>
@@ -48,6 +47,11 @@
 
           </div>
         </div>
+
+        <form action="getArticlePostContents/" id='getArticlePostContents' method="POST">
+          {% csrf_token %}
+          <input type="hidden" id='articlePrimaryId' name="articlePrimaryId" value="">
+        </form>
 
         <div class="col-lg-3 col-sm-3">
 

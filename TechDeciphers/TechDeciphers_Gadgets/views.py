@@ -11,11 +11,6 @@ def index(request):
     gadgetsDictionary = {'gadgetsList' : gadgetsList, 'times' : list(range(4))}
     return render(request, 'TechDeciphers_Gadgets/gadgetTry.html', gadgetsDictionary)
 
-# def gadgetsTry(request):
-#     gadgetsList = Gadgets.objects.all().order_by('-postPublishDate')
-#     gadgetsDictionary = {'gadgetsList' : gadgetsList, 'times' : list(range(4))}
-#     return render(request, 'TechDeciphers_Gadgets/gadgetTry.html', gadgetsDictionary)
-
 def gadgetsForm(request):
     form = GadgetForm()
 
@@ -29,5 +24,17 @@ def gadgetsForm(request):
 
     return render(request, 'TechDeciphers_Gadgets/gadgetsForm.html', {'form' : form,'times' : list(range(4))})
 
-def gadgetsArticlePost(request):
-    return render(request, 'CommonTemplates/ArticlePost/articlePost.html', {'times' : list(range(4))})
+def getArticlePostContents(request):
+    articleId = request.POST.get('articlePrimaryId', None)
+    myArticle = Gadgets.objects.filter(gadgetId = articleId)[0]
+    myArticleContents = {
+                            'articleImage' : myArticle.gadgetImage,
+                            'heading' : myArticle.heading,
+                            'miniHeading' : myArticle.miniHeading,
+                            'miniContent' : myArticle.miniContent,
+                            'completeContent' : myArticle.completeContent,
+                            'postAuthor' : myArticle.postAuthor,
+                            'postPublishDate' : myArticle.postPublishDate
+                        }
+    dataDictionary = {'myArticleContents' : myArticleContents, 'times' : list(range(4))}
+    return render(request, 'CommonTemplates/ArticlePost/articlePost.html', dataDictionary)
