@@ -2,7 +2,7 @@ from django.db import models
 
 class Gadgets(models.Model):
     gadgetId = models.AutoField(primary_key=True)
-    gadgetImage = models.ImageField(upload_to='TechDeciphers_Gadgets')
+    gadgetImage = models.ImageField(upload_to='TechDeciphers_Gadgets', blank=True)
     typeOfGadget = models.CharField(max_length=100)
     heading = models.CharField(max_length=200)
     miniHeading = models.CharField(max_length=200)

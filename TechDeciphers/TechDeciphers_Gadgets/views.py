@@ -22,7 +22,7 @@ def gadgetsForm(request):
         else:
             print(form.errors)
 
-    return render(request, 'TechDeciphers_Gadgets/gadgetsForm.html', {'form' : form,'times' : list(range(4))})
+    return render(request, 'TechDeciphers_Gadgets/gadgetsForm.html', {'form' : form})
 
 def getArticlePostContents(request):
     articleId = request.POST.get('articlePrimaryId', None)
