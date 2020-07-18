@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% load static %}
+
+{% if gadgetsList %}
+  {% for gadget in gadgetsList %}
+    <div class="col-lg-4" onclick='openThisArticle("{{gadget.gadgetId}}","gadget")'>
+      <div class="card">
+          <img class="card-img-top" src="{{ gadget.gadgetImage.url }}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{ gadget.heading }}</h5>
+          <p class="card-text">{{gadget.miniContent}}</p>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+{% endif %}

@@ -5,16 +5,16 @@ from TechDeciphers_Leaks.models import Leaks
 from TechDeciphers_TopX.models import TopX
 
 def index(request):
-    gadgetsList = Gadgets.objects.all().order_by('-postPublishDate')
-    newsList = News.objects.all().order_by('-postPublishDate')
-    leaksList = Leaks.objects.all().order_by('-postPublishDate')
-    topXList = TopX.objects.all().order_by('-postPublishDate')
+    gadgetsList = Gadgets.objects.all().order_by('-postPublishDate')[:3]
+    newsList = News.objects.all().order_by('-postPublishDate')[:2]
+    leaksList = Leaks.objects.all().order_by('-postPublishDate')[:2]
+    topXList = TopX.objects.all().order_by('-postPublishDate')[:2]
     homeDictionary = {
                         'gadgetsList' : gadgetsList,
                         'newsList' : newsList,
                         'leaksList' : leaksList,
                         'topXList' : topXList,
-                        'times' : list(range(4))
+                        'times' : list(range(3))
                      }
     return render(request, 'TechDeciphers_Home/home.html', homeDictionary)
 
