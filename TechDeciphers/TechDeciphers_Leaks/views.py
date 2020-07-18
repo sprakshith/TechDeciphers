@@ -14,7 +14,7 @@ def leaksForm(request):
     form = LeaksForm()
 
     if request.method == "POST":
-        form = LeaksForm(request.POST)
+        form = LeaksForm(data=request.POST, files=request.FILES)
         if form.is_valid():
             form.save(commit=True)
             return index(request)

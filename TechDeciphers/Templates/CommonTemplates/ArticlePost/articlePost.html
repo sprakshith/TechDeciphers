@@ -33,7 +33,11 @@
             </div>
 
             <div class="articleImage">
+                {% if myArticleContents.articleImage %}
                   <img src="{{ myArticleContents.articleImage.url }}" alt="Oops, Sorry..!">
+                {% else %}
+                  <img class="card-img-top" src="{% static "TechDeciphers_Gadgets/Static_Files/imageNotFound.png" %}" alt="Card image cap">
+                {% endif %}
             </div>
 
             <div class="articleContent">

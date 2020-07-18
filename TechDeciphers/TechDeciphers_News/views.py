@@ -15,7 +15,7 @@ def newsForm(request):
     form = NewsForm()
 
     if request.method == "POST":
-        form = NewsForm(request.POST)
+        form = NewsForm(data=request.POST, files=request.FILES)
         if form.is_valid():
             form.save(commit=True)
             return index(request)

@@ -15,7 +15,7 @@ def gadgetsForm(request):
     form = GadgetForm()
 
     if request.method == "POST":
-        form = GadgetForm(request.POST)
+        form = GadgetForm(data=request.POST, files=request.FILES)
         if form.is_valid():
             form.save(commit=True)
             return index(request)

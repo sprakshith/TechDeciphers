@@ -30,7 +30,11 @@
                   <div class="card">
                     <div class="row" onclick='openThisArticle("{{leak.leakId}}")'>
                       <div class="col-lg-4">
-                        <img class="card-img-top" src="{{ leak.leakImage.url }}" alt="Card image cap">
+                        {% if leak.leakImage %}
+                          <img class="card-img-top" src="{{ leak.leakImage.url }}" alt="Card image cap">
+                        {% else %}
+                          <img class="card-img-top" src="{% static "TechDeciphers_Gadgets/Static_Files/imageNotFound.png" %}" alt="Card image cap">
+                        {% endif %}
                       </div>
 
                       <div class="col-lg-8">

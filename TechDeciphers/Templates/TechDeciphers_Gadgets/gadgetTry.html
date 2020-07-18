@@ -30,7 +30,11 @@
               {% for gadget in gadgetsList %}
                 <div class="col-lg-4" onclick='openThisArticle("{{gadget.gadgetId}}")'>
                   <div class="card">
-                      <img class="card-img-top" src="{{ gadget.gadgetImage.url }}" alt="Card image cap">
+                      {% if gadget.gadgetImage %}
+                        <img class="card-img-top" src="{{ gadget.gadgetImage.url }}" alt="Card image cap">
+                      {% else %}
+                        <img class="card-img-top" src="{% static "TechDeciphers_Gadgets/Static_Files/imageNotFound.png" %}" alt="Card image cap">
+                      {% endif %}
                     <div class="card-body">
                       <h5 class="card-title">{{ gadget.heading }}</h5>
                       <p class="card-text">{{gadget.miniContent}}</p>

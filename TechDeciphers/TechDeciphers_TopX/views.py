@@ -14,7 +14,7 @@ def topXForm(request):
     form = TopXForm()
 
     if request.method == "POST":
-        form = TopXForm(request.POST)
+        form = TopXForm(data=request.POST, files=request.FILES)
         if form.is_valid():
             form.save(commit=True)
             return index(request)

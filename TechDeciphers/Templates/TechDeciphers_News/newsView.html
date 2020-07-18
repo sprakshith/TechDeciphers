@@ -29,7 +29,11 @@
                   <div class="card">
                     <div class="row" onclick='openThisArticle("{{news.newsId}}")'>
                       <div class="col-lg-4">
+                        {% if news.newsImage %}
                         <img class="card-img-top" src="{{ news.newsImage.url }}" alt="Card image cap">
+                        {% else %}
+                          <img class="card-img-top" src="{% static "TechDeciphers_Gadgets/Static_Files/imageNotFound.png" %}" alt="Card image cap">
+                        {% endif %}
                       </div>
 
                       <div class="col-lg-8">

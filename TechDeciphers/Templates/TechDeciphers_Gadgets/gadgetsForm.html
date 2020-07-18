@@ -25,7 +25,7 @@
       <div class="row">
         <div class="col-lg-12">
 
-          <form action="" class="article-form-class" method="POST">
+          <form action="" class="article-form-class" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <p><label for="id_heading">Gadget Name:</label>
             {{form.heading}}</p>
