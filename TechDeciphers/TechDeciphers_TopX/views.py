@@ -1,13 +1,22 @@
 from django.shortcuts import render
+from django.core.paginator import Paginator
 from TechDeciphers_TopX.models import TopX
 from TechDeciphers_TopX.form import TopXForm
 
 # def index(request):
 #     return render(request, "TechDeciphers_TopX/topX.html", {'times' : list(range(4)), 'times2' : list(range(8))})
 
+# def index(request):
+#     topXList = TopX.objects.all().order_by('-postPublishDate')
+#     topXDictionary = {'topXList' : topXList, 'times' : list(range(4))}
+#     return render(request, 'TechDeciphers_TopX/topXView.html', topXDictionary)
+
 def index(request):
     topXList = TopX.objects.all().order_by('-postPublishDate')
-    topXDictionary = {'topXList' : topXList, 'times' : list(range(4))}
+    paginator = Paginator(topXList, 16)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    topXDictionary = {'page_obj' : page_obj, 'times' : list(range(4))}
     return render(request, 'TechDeciphers_TopX/topXView.html', topXDictionary)
 
 def topXForm(request):

@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
+from django.core.paginator import Paginator
 from TechDeciphers_News.models import News
 from TechDeciphers_News.form import NewsForm
 from django.http import JsonResponse
@@ -6,9 +7,17 @@ from django.http import JsonResponse
 # def index(request):
 #     return render(request, 'TechDeciphers_News/news.html', {'times' : list(range(4))})
 
+# def index(request):
+#     newsList = News.objects.all().order_by('-postPublishDate')
+#     newsDictionary = {'newsList' : newsList, 'times' : list(range(4))}
+#     return render(request, 'TechDeciphers_News/newsView.html', newsDictionary)
+
 def index(request):
     newsList = News.objects.all().order_by('-postPublishDate')
-    newsDictionary = {'newsList' : newsList, 'times' : list(range(4))}
+    paginator = Paginator(newsList, 16)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    newsDictionary = {'page_obj' : page_obj, 'times' : list(range(4))}
     return render(request, 'TechDeciphers_News/newsView.html', newsDictionary)
 
 def newsForm(request):

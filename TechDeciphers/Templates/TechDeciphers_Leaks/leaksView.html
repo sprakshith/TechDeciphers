@@ -24,8 +24,8 @@
         <div class="col-lg-9 col-sm-9">
           <div class="row">
 
-            {% if leaksList %}
-              {% for leak in leaksList %}
+            {% if page_obj %}
+              {% for leak in page_obj %}
                 <div class="col-sm-6">
                   <div class="card">
                     <div class="row" onclick='openThisArticle("{{leak.leakId}}")'>
@@ -51,6 +51,23 @@
             {% endif %}
 
           </div>
+
+          <div style="text-align: center;">
+            <nav aria-label="Page navigation example" style="display: inline-block;">
+                <ul class="pagination">
+                  {% if page_obj.has_previous %}
+                  <li class="page-item"><a class="page-link" href="?page=1">&laquo; First</a></li>
+                  <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a></li>
+                  {% endif %}
+                  <li class="page-item"><a class="page-link">{{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</a></li>
+                  {% if page_obj.has_next %}
+                  <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a></li>
+                  <li class="page-item"><a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">Last &raquo;</a></li>
+                  {% endif %}
+                </ul>
+            </nav>
+         </div>
+
         </div>
 
         <form action="getArticlePostContents/" id='getArticlePostContents' method="POST">
