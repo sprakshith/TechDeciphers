@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.core.paginator import Paginator
 from TechDeciphers_Gadgets.models import Gadgets
 from TechDeciphers_Gadgets.form import GadgetForm
@@ -27,7 +27,7 @@ def gadgetsForm(request):
         form = GadgetForm(data=request.POST, files=request.FILES)
         if form.is_valid():
             form.save(commit=True)
-            return index(request)
+            return redirect('/gadgets')
         else:
             print(form.errors)
 

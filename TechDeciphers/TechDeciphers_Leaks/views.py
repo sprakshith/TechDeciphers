@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.core.paginator import Paginator
 from TechDeciphers_Leaks.models import Leaks
 from TechDeciphers_Leaks.form import LeaksForm
@@ -26,7 +26,7 @@ def leaksForm(request):
         form = LeaksForm(data=request.POST, files=request.FILES)
         if form.is_valid():
             form.save(commit=True)
-            return index(request)
+            return redirect('/leaks')
         else:
             print(form.errors)
 

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.core.paginator import Paginator
 from TechDeciphers_News.models import News
 from TechDeciphers_News.form import NewsForm
@@ -27,7 +27,7 @@ def newsForm(request):
         form = NewsForm(data=request.POST, files=request.FILES)
         if form.is_valid():
             form.save(commit=True)
-            return index(request)
+            return redirect('/news')
         else:
             print(form.errors)
 

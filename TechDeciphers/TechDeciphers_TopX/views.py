@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.core.paginator import Paginator
 from TechDeciphers_TopX.models import TopX
 from TechDeciphers_TopX.form import TopXForm
@@ -26,7 +26,7 @@ def topXForm(request):
         form = TopXForm(data=request.POST, files=request.FILES)
         if form.is_valid():
             form.save(commit=True)
-            return index(request)
+            return redirect('/topX')
         else:
             print(form.errors)
 
