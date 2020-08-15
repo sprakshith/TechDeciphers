@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from TechDeciphers_Gadgets.models import Gadgets
 from TechDeciphers_News.models import News
@@ -6,18 +6,19 @@ from TechDeciphers_Leaks.models import Leaks
 from TechDeciphers_TopX.models import TopX
 
 def index(request):
-    gadgetsList = Gadgets.objects.all().order_by('-postPublishDate')[:3]
-    newsList = News.objects.all().order_by('-postPublishDate')[:2]
-    leaksList = Leaks.objects.all().order_by('-postPublishDate')[:2]
-    topXList = TopX.objects.all().order_by('-postPublishDate')[:2]
-    homeDictionary = {
-                        'gadgetsList' : gadgetsList,
-                        'newsList' : newsList,
-                        'leaksList' : leaksList,
-                        'topXList' : topXList,
-                        'times' : list(range(3))
-                     }
-    return render(request, 'TechDeciphers_Home/home.html', homeDictionary)
+        gadgetsList = Gadgets.objects.all().order_by('-postPublishDate')[:3]
+        newsList = News.objects.all().order_by('-postPublishDate')[:2]
+        leaksList = Leaks.objects.all().order_by('-postPublishDate')[:2]
+        topXList = TopX.objects.all().order_by('-postPublishDate')[:2]
+        homeDictionary = {
+                            'gadgetsList' : gadgetsList,
+                            'newsList' : newsList,
+                            'leaksList' : leaksList,
+                            'topXList' : topXList,
+                            'times' : list(range(3))
+                         }
+
+        return render(request, 'TechDeciphers_Home/home.html', homeDictionary)
 
 def getArticlePostContents(request):
     articleId = request.POST.get('articlePrimaryId', None)
@@ -82,6 +83,7 @@ def getSearchedArticlePostContents(request):
     newsList = News.objects.filter(heading__icontains = searchValue)[:2]
     leaksList = Leaks.objects.filter(heading__icontains = searchValue)[:2]
     topXList = TopX.objects.filter(heading__icontains = searchValue)[:2]
+
     homeDictionary = {
                         'gadgetsList' : gadgetsList,
                         'newsList' : newsList,
@@ -89,4 +91,5 @@ def getSearchedArticlePostContents(request):
                         'topXList' : topXList,
                         'times' : list(range(3))
                      }
+
     return render(request, 'TechDeciphers_Home/home.html', homeDictionary)

@@ -1,5 +1,6 @@
 from django.urls import path, include
 from TechDeciphers_News import views
+from TechDeciphers_Home import views as homeView
 
 app_name = 'TechDeciphers_News'
 

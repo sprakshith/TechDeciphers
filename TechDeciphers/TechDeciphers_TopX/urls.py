@@ -1,5 +1,6 @@
 from django.urls import path, include
 from TechDeciphers_TopX import views
+from TechDeciphers_Home import views as homeView
 
 app_name = 'TechDeciphers_TopX'
 

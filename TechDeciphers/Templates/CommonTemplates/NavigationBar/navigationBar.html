@@ -13,7 +13,7 @@
             <li class="nav-item"><a class="nav-link" href="{% url 'TechDeciphers_Leaks:index' %}">Leaks</a></li>
           </ul>
 
-          <form action="getSearchedArticlePostContents/" method="POST" class="form-inline my-2 my-lg-0" id='searchArticleFormId'>
+          <form action="/getSearchedArticlePostContents/" method="POST" class="form-inline my-2 my-lg-0" id='searchArticleFormId'>
             {% csrf_token %}
             <input class="form-control mr-sm-2 navigationSearchBar" type="search" name="seachArticleName" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-info my-2 my-sm-0 navigationSearchBtn" type="submit">Search</button>

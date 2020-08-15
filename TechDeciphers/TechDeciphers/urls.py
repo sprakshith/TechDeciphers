@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path, include
+from TechDeciphers_Home import views as homeViews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,5 +25,7 @@ urlpatterns = [
     path('gadgets/', include('TechDeciphers_Gadgets.urls')),
     path('news/', include('TechDeciphers_News.urls')),
     path('topX/', include('TechDeciphers_TopX.urls')),
-    path('leaks/', include('TechDeciphers_Leaks.urls'))
+    path('leaks/', include('TechDeciphers_Leaks.urls')),
+    path('getSearchedArticlePostContents/', homeViews.getSearchedArticlePostContents, name='getSearchedArticlePostContents'),
+    path('getSearchedArticlePostContents/getArticlePostContents/', homeViews.getArticlePostContents, name='getArticlePostContents')
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
