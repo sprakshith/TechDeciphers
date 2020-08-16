@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.core.paginator import Paginator
 from TechDeciphers_TopX.models import TopX
@@ -12,13 +13,15 @@ from TechDeciphers_TopX.form import TopXForm
 #     return render(request, 'TechDeciphers_TopX/topXView.html', topXDictionary)
 
 def index(request):
-    topXList = TopX.objects.all().order_by('-postPublishDate')
+    topXList = TopX.objects.filter(isPublished = True).order_by('-postPublishDate')
     paginator = Paginator(topXList, 16)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     topXDictionary = {'page_obj' : page_obj, 'times' : list(range(4))}
     return render(request, 'TechDeciphers_TopX/topXView.html', topXDictionary)
 
+
+@login_required(login_url="/errorPageNotFound/")
 def topXForm(request):
     form = TopXForm()
 

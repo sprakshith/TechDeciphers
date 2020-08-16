@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.core.paginator import Paginator
 from TechDeciphers_Leaks.models import Leaks
@@ -12,13 +13,15 @@ from TechDeciphers_Leaks.form import LeaksForm
 #     return render(request, 'TechDeciphers_Leaks/leaksView.html', leaksDictionary)
 
 def index(request):
-    leaksList = Leaks.objects.all().order_by('-postPublishDate')
+    leaksList = Leaks.objects.filter(isPublished = True).order_by('-postPublishDate')
     paginator = Paginator(leaksList, 16)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     leaksDictionary = {'page_obj' : page_obj, 'times' : list(range(4))}
     return render(request, 'TechDeciphers_Leaks/leaksView.html', leaksDictionary)
 
+
+@login_required(login_url="/errorPageNotFound/")
 def leaksForm(request):
     form = LeaksForm()
 

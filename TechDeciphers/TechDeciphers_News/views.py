@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.core.paginator import Paginator
 from TechDeciphers_News.models import News
@@ -13,13 +14,15 @@ from django.http import JsonResponse
 #     return render(request, 'TechDeciphers_News/newsView.html', newsDictionary)
 
 def index(request):
-    newsList = News.objects.all().order_by('-postPublishDate')
+    newsList = News.objects.filter(isPublished = True).order_by('-postPublishDate')
     paginator = Paginator(newsList, 16)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     newsDictionary = {'page_obj' : page_obj, 'times' : list(range(4))}
     return render(request, 'TechDeciphers_News/newsView.html', newsDictionary)
 
+
+@login_required(login_url="/errorPageNotFound/")
 def newsForm(request):
     form = NewsForm()
 

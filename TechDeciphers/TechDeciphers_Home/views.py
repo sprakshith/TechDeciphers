@@ -6,10 +6,10 @@ from TechDeciphers_Leaks.models import Leaks
 from TechDeciphers_TopX.models import TopX
 
 def index(request):
-        gadgetsList = Gadgets.objects.all().order_by('-postPublishDate')[:3]
-        newsList = News.objects.all().order_by('-postPublishDate')[:2]
-        leaksList = Leaks.objects.all().order_by('-postPublishDate')[:2]
-        topXList = TopX.objects.all().order_by('-postPublishDate')[:2]
+        gadgetsList = Gadgets.objects.filter(isPublished = True).order_by('-postPublishDate')[:3]
+        newsList = News.objects.filter(isPublished = True).order_by('-postPublishDate')[:2]
+        leaksList = Leaks.objects.filter(isPublished = True).order_by('-postPublishDate')[:2]
+        topXList = TopX.objects.filter(isPublished = True).order_by('-postPublishDate')[:2]
         homeDictionary = {
                             'gadgetsList' : gadgetsList,
                             'newsList' : newsList,
@@ -79,10 +79,10 @@ def getArticlePostContents(request):
 def getSearchedArticlePostContents(request):
     searchValue = request.POST.get('seachArticleName', None)
 
-    gadgetsList = Gadgets.objects.filter(heading__icontains = searchValue)[:3]
-    newsList = News.objects.filter(heading__icontains = searchValue)[:2]
-    leaksList = Leaks.objects.filter(heading__icontains = searchValue)[:2]
-    topXList = TopX.objects.filter(heading__icontains = searchValue)[:2]
+    gadgetsList = Gadgets.objects.filter(heading__icontains = searchValue, isPublished = True)[:3]
+    newsList = News.objects.filter(heading__icontains = searchValue, isPublished = True)[:2]
+    leaksList = Leaks.objects.filter(heading__icontains = searchValue, isPublished = True)[:2]
+    topXList = TopX.objects.filter(heading__icontains = searchValue, isPublished = True)[:2]
 
     homeDictionary = {
                         'gadgetsList' : gadgetsList,
@@ -93,3 +93,6 @@ def getSearchedArticlePostContents(request):
                      }
 
     return render(request, 'TechDeciphers_Home/home.html', homeDictionary)
+
+def error404PageNotFound(request):
+    return render(request, 'CommonTemplates/Error_Pages/loginRequired.html', {})

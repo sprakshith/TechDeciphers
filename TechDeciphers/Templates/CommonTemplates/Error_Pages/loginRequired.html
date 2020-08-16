@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Article Post</title>
+
+    <!-- Common Imports Like Bootstrap and Jquery -->
+    {% include "CommonTemplates/CommonImports/allImports.html" %}
+
+    <!-- Link to My Script and CSS -->
+    <link rel="stylesheet" href="{% static "CommonTemplates/Error_Pages/loginRequired.css" %}">
+
+  </head>
+  <body>
+
+    <div class="container">
+
+      <div class='errorContainingClass'>
+        <img src="{% static "CommonTemplates/Footer/TechDeciphersLogo.png" %}" alt="TechDecipher">
+        <br>
+        <label>404</label>
+        <p>Sorry, the Page You are Looking for is Not Found</p>
+        <span class='anchorTagContainer'> <a href="/" id='backToHomePageId'><< Go Back to Home Page</a> <a href="/admin/" id='goToLoginPageId'>Login as Admin>></a> </span>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>

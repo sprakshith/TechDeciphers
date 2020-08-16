@@ -1,0 +1,29 @@
+body {
+  background-color: #000020;
+}
+
+.errorContainingClass{
+  text-align: center;
+}
+
+.errorContainingClass label{
+  font-size: 100px;
+  color: #c1c9c1;
+}
+
+.errorContainingClass p{
+    font-size: 25px;
+    color: #c1c9c1;;
+}
+
+.errorContainingClass .anchorTagContainer {
+  margin-top: 10px
+}
+
+.errorContainingClass #backToHomePageId{
+    float: left;
+}
+
+.errorContainingClass #goToLoginPageId{
+    float: right;
+}
