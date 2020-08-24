@@ -104,7 +104,7 @@ def error404PageNotFound(request):
 def sms(request):
 
     account_sid = 'AC9357105f5b4b1f8affe58951c64d5f99'
-    auth_token = 'c73a0e4a657c8033107a73d8108472fc'
+    auth_token = '6952b1b2a154522e6e367d16714ae76e'
     client = Client(account_sid, auth_token)
 
     message = client.messages.create(
