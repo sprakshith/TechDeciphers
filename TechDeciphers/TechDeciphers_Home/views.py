@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from twilio.rest import Client
+from django.views.decorators.csrf import csrf_exempt
 from TechDeciphers_Gadgets.models import Gadgets
 from TechDeciphers_News.models import News
 from TechDeciphers_Leaks.models import Leaks
@@ -96,3 +98,21 @@ def getSearchedArticlePostContents(request):
 
 def error404PageNotFound(request):
     return render(request, 'CommonTemplates/Error_Pages/loginRequired.html', {})
+
+
+@csrf_exempt
+def sms(request):
+
+    account_sid = 'AC9357105f5b4b1f8affe58951c64d5f99'
+    auth_token = 'c73a0e4a657c8033107a73d8108472fc'
+    client = Client(account_sid, auth_token)
+
+    message = client.messages.create(
+                                      body = 'Hi All',
+                                      from_ = 'whatsapp:+14155238886',
+                                      to = 'whatsapp:+919742538349'
+                                    )
+
+    print(message.sid)
+
+    return HttpResponse("Worked")
