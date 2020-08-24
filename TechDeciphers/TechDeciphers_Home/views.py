@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from twilio.rest import Client
+from twilio.twiml.messaging_response import MessagingResponse
 from django.views.decorators.csrf import csrf_exempt
 from TechDeciphers_Gadgets.models import Gadgets
 from TechDeciphers_News.models import News
@@ -102,5 +102,8 @@ def error404PageNotFound(request):
 
 @csrf_exempt
 def sms(request):
-    twiml = '<Response><Message>Hello from your Django app!</Message></Response>'
-    return HttpResponse(twiml, content_type='text/xml')
+    receivedString = request.POST.get('Body', 'NA')
+    replyString = "Your Text is : " + receivedString
+    r = MessagingResponse()
+    r.message(replyString)
+    return HttpResponse(r, content_type='text/xml')
