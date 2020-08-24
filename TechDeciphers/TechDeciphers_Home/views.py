@@ -102,17 +102,5 @@ def error404PageNotFound(request):
 
 @csrf_exempt
 def sms(request):
-
-    account_sid = 'AC9357105f5b4b1f8affe58951c64d5f99'
-    auth_token = '6952b1b2a154522e6e367d16714ae76e'
-    client = Client(account_sid, auth_token)
-
-    message = client.messages.create(
-                                      body = 'Hi All',
-                                      from_ = 'whatsapp:+14155238886',
-                                      to = 'whatsapp:+919742538349'
-                                    )
-
-    print(message.sid)
-
-    return HttpResponse("Worked")
+    twiml = '<Response><Message>Hello from your Django app!</Message></Response>'
+    return HttpResponse(twiml, content_type='text/xml')
