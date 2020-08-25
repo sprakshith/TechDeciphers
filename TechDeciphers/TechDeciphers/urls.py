@@ -22,6 +22,7 @@ from TechDeciphers_Home import views as homeViews
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('TechDeciphers_Home.urls')),
+    path('sms/',include('TechDeciphers_ChatBotService.urls')),
     path('gadgets/', include('TechDeciphers_Gadgets.urls')),
     path('news/', include('TechDeciphers_News.urls')),
     path('topX/', include('TechDeciphers_TopX.urls')),
