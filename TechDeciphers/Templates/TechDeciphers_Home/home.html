@@ -8,6 +8,9 @@
     <!-- Common Imports Like Bootstrap and Jquery -->
     {% include "CommonTemplates/CommonImports/allImports.html" %}
 
+    <!-- AdSence Verification Code -->
+    <script data-ad-client="ca-pub-5087517509528329" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
     <!-- Link to My Script and CSS -->
     <link rel="stylesheet" href="{% static "TechDeciphers_Home/Css/main.css" %}">
     <link rel="stylesheet" href="{% static "TechDeciphers_Gadgets/Css/main.css" %}">
@@ -62,10 +65,7 @@
           </form>
 
           <div class="col-lg-3 col-sm-3" style="margin-top: 50px;">
-              {% for count in times %}
-                <!-- Carousel -->
-                {% include "CommonTemplates/Carousel/verticleCarousel.html" %}
-              {% endfor %}
+              <!-- AdSense Code will be added here. -->
           </div>
       </div>
     </div>
