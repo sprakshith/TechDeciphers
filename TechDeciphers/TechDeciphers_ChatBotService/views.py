@@ -21,7 +21,7 @@ def index(request):
     receivedString = request.POST.get('Body', 'NA')
     r = MessagingResponse()
 
-    if receivedString == 'Help' or receivedString == '0':
+    if receivedString == 'help' or receivedString == 'Help' or receivedString == '0':
         r.message(getCurrentCommands())
     elif receivedString == 'ShowUnpublishedArticle' or receivedString == '1':
         r.message("There are No Unpublished Articles right Now")
