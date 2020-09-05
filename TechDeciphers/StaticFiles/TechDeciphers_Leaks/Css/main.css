@@ -15,6 +15,7 @@
     border-right: 0px;
     border-left: 0px;
     cursor: pointer;
+    height: 148px;
 }
 
 .col-sm-6 .card:hover {

@@ -21,14 +21,14 @@
     <div class="container">
       <!-- Main Body -->
       <div class="row">
-        <div class="col-lg-9 col-sm-9">
+        <div class="col-sm-9">
           <div class="row">
             {% if page_obj %}
               {% for news in page_obj %}
                 <div class="col-sm-6">
                   <div class="card">
                     <div class="row" onclick='openThisArticle("{{news.newsId}}")'>
-                      <div class="col-lg-4">
+                      <div class="col-sm-4">
                         {% if news.newsImage %}
                         <img class="card-img-top" src="{{ news.newsImage.url }}" alt="Card image cap">
                         {% else %}
@@ -36,7 +36,7 @@
                         {% endif %}
                       </div>
 
-                      <div class="col-lg-8">
+                      <div class="col-sm-8">
                           <div class="card-body">
                             <h5 class="card-title">{{ news.heading }}</h5>
                             <p class="card-text">{{news.miniHeading}}</p>
@@ -74,7 +74,7 @@
           <input type="hidden" id='articlePrimaryId' name="articlePrimaryId" value="">
         </form>
 
-        <div class="col-lg-3 col-sm-3">
+        <div class="col-sm-3">
 
           <!-- AdSense Code will be added here. -->
 
