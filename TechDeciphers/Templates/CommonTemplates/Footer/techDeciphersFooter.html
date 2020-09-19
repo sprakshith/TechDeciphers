@@ -9,11 +9,14 @@
             <img src="{% static "CommonTemplates/Footer/TechDeciphersLogo.png" %}" alt="TechDecipher">
       </div>
 
-      <div class="col-lg-3" id="unknownForNow">
-        <p style="color : #c1c9c1;position: absolute;left: 35px;">Empty for Now. Opened for Suggestions.</p>
+      <div class="col-lg-3 socialMediaLinks">
+          <p><a href="{% url 'TechDeciphers_Gadgets:index' %}"><span>Gadgets</span></a></p>
+          <p><a href="{% url 'TechDeciphers_News:index' %}"><span>News</span></a></p>
+          <p><a href="{% url 'TechDeciphers_TopX:index' %}"><span>Top X</span></a></p>
+          <p><a href="{% url 'TechDeciphers_Leaks:index' %}"><span>Leaks</span></a></p>
       </div>
 
-      <div class="col-lg-3" id='socialMediaLinks'> <a href="#">
+      <div class="col-lg-3 socialMediaLinks">
           <p><a href="https://facebook.com"><span id='facebook'><i class="fa fa-facebook-square" aria-hidden="true"></i></span> Facebook</a></p>
           <p><a href="https://twitter.com"><span id='twitter'><i class="fa fa-twitter" aria-hidden="true"></i></span> Twitter</a></p>
           <p><a href="https://instagram.com"><span id='instagram'><i class="fa fa-instagram" aria-hidden="true"></i></span> Instagram</a></p>
@@ -21,9 +24,9 @@
       </div>
 
       <div class="col-lg-3" id="footer-right-3">
-        <p id='dropSuggestion'><a href="#">Drop Your Suggestions</a></p>
-        <p id='supporUs'><a href="#">Support us on Patreon</a></p>
-        <p id='moreAboutUs'><a href="#">More About Us</a></p>
+        <p id='dropSuggestion'><a href="javascript:void(0)">Drop Your Suggestion</a></p>
+        <p id='supporUs'><a href="javascript:void(0)">Support us on Patreon</a></p>
+        <p id='moreAboutUs'><a href="{% url 'TechDeciphers_Home:aboutUsPage' %}">About Us</a></p>
         <form action="index.html" method="POST">
           <p id='stayConnected'><input class='form-control' type="text" placeholder="Email Id here..."> </p>
           <button type="submit" class='btn btn-outline-info my-2 my-sm-0 updateMeBtn'>Keep Me Updated.!</button>
@@ -42,6 +45,14 @@
    </p>
    <p id='copyrightId'>© Copyright TechDeciphers  Limited 2020. All rights reserved.</p>
 </div>
+
+  <!-- Drop Suggestion Modal -->
+  {% include "CommonTemplates/Modals/dropSuggestion.html" %}
+
+  <!-- Support Us -->
+  {% include "CommonTemplates/Modals/supportUs.html" %}
+
+
 
 <!-- Css Link For Footer -->
 <link rel="stylesheet" href="{% static "CommonTemplates/Footer/techDeciphersFooter.css" %}">

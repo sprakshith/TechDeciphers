@@ -16,18 +16,18 @@
   position: relative;
 }
 
-#socialMediaLinks {
+.socialMediaLinks {
   font-size: 24px;
   color: #c1c9c1;
   text-align: center;
   border-left: 2px solid white;
 }
 
-#socialMediaLinks a {
+.socialMediaLinks a {
   color: #c1c9c1;
 }
 
-#socialMediaLinks a:hover {
+.socialMediaLinks a:hover {
   color:#17a2b8;
   cursor:pointer;
 }

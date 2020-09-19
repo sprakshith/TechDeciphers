@@ -95,3 +95,6 @@ def getSearchedArticlePostContents(request):
 
 def error404PageNotFound(request):
     return render(request, 'CommonTemplates/Error_Pages/loginRequired.html', {})
+
+def aboutUsPage(request):
+    return render(request, 'CommonTemplates/AboutUs/aboutUs.html', {})

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+
+<div class="modal" id='supportUsModal' tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Support Us</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 14px;">
+          Hi...we are small group of Developers who have created this Website to deliver Informative contents to our viewers
+          on trending and upcoming technologies. We try to keep our content small and simple. Incase you like what you see
+          here and want to help us out. Use the below code. Thanks a lot for visiting our website.
+        </p>
+
+        <div style="text-align: center;">
+          <img src="{% static "CommonTemplates/Modal/GPay-QR-Code.jpg" %}" alt="Sorry for Inconvenience" style="width : 50%;">
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <p style="font-size:11px">
+          <strong style="font-size:14px">Disclaimer:</strong> The Money we recieve will be used for the Development of this website.
+          <strong style="color:red;">We are neither forcing you to support us nor we are promising to donate money to so and so Charity.</strong>
+          Please make sure of that, thanks for showing your interest in us.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style media="screen">
+
+  #supportUsModal .modal-content {
+    background-color: #f5f5f5;
+  }
+
+</style>
+
+<script type="text/javascript">
+
+  $(document).ready(function() {
+
+    $("#supporUs").click(function(){
+      $("#supportUsModal").modal();
+    });
+
+  });
+
+</script>
