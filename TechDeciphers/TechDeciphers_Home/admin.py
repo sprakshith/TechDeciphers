@@ -1,3 +1,5 @@
 from django.contrib import admin
+from TechDeciphers_Home.models import DropSuggestionModel, KeepMeUpdatedEmail
 
-# Register your models here.
+admin.site.register(DropSuggestionModel)
+admin.site.register(KeepMeUpdatedEmail)

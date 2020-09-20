@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect
+from TechDeciphers_Home.models import DropSuggestionModel, KeepMeUpdatedEmail
 from TechDeciphers_Gadgets.models import Gadgets
 from TechDeciphers_News.models import News
 from TechDeciphers_Leaks.models import Leaks
 from TechDeciphers_TopX.models import TopX
+from django.http import JsonResponse
 
 def index(request):
         gadgetsList = Gadgets.objects.filter(isPublished = True).order_by('-postPublishDate')[:3]
@@ -92,6 +94,25 @@ def getSearchedArticlePostContents(request):
                      }
 
     return render(request, 'TechDeciphers_Home/home.html', homeDictionary)
+
+def dropSuggestion(request):
+    emailId = request.GET.get('EMAILID', None)
+    suggestion = request.GET.get('SUGGESTION', None)
+
+    if emailId != None and suggestion != None:
+        modelInstance = DropSuggestionModel(suggestorEmailId = emailId, suggestiontText = suggestion)
+        modelInstance.save()
+
+    return JsonResponse({'Message' : 'Object Created Succesfully'})
+
+def keepMeUpdated(request):
+    emailId = request.GET.get('EMAILID', None)
+
+    if emailId != None:
+        modelInstance = KeepMeUpdatedEmail(newsletterEmailId = emailId)
+        modelInstance.save()
+
+    return JsonResponse({'Message' : 'Object Created Succesfully'})
 
 def error404PageNotFound(request):
     return render(request, 'CommonTemplates/Error_Pages/loginRequired.html', {})

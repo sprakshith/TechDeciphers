@@ -27,10 +27,8 @@
         <p id='dropSuggestion'><a href="javascript:void(0)">Drop Your Suggestion</a></p>
         <p id='supporUs'><a href="javascript:void(0)">Support us on Patreon</a></p>
         <p id='moreAboutUs'><a href="{% url 'TechDeciphers_Home:aboutUsPage' %}">About Us</a></p>
-        <form action="index.html" method="POST">
-          <p id='stayConnected'><input class='form-control' type="text" placeholder="Email Id here..."> </p>
-          <button type="submit" class='btn btn-outline-info my-2 my-sm-0 updateMeBtn'>Keep Me Updated.!</button>
-        </form>
+        <p id='stayConnected'><input class='form-control' type="text" placeholder="Email Id here..."> </p>
+        <button type="submit" id='keepMeUpdatedBtn' class='btn btn-outline-info my-2 my-sm-0 updateMeBtn'>Keep Me Updated.!</button>
       </div>
     </div>
 
@@ -56,3 +54,4 @@
 
 <!-- Css Link For Footer -->
 <link rel="stylesheet" href="{% static "CommonTemplates/Footer/techDeciphersFooter.css" %}">
+<script src="{% static "CommonTemplates/Footer/techDeciphersFooter.js" %}"></script>
