@@ -18,7 +18,7 @@
         </p>
 
         <div style="text-align: center;">
-          <img src="{% static "CommonTemplates/Modal/workInProgress.png" %}" alt="Sorry for Inconvenience" style="width : 50%;">
+          <img id="patreonLogoId" src="{% static "CommonTemplates/Modal/patreon_logo.jpg" %}" alt="Sorry for Inconvenience" style="width : 50%;">
         </div>
 
       </div>
@@ -39,6 +39,10 @@
     background-color: #f5f5f5;
   }
 
+  #patreonLogoId {
+    cursor: pointer;
+  }
+
 </style>
 
 <script type="text/javascript">
@@ -47,6 +51,10 @@
 
     $("#supporUs").click(function(){
       $("#supportUsModal").modal();
+    });
+
+    $("#patreonLogoId").click(function(){
+      window.location.href = "https://www.patreon.com/techdeciphers";
     });
 
   });
