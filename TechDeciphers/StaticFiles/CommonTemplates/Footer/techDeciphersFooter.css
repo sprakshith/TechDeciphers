@@ -2,14 +2,14 @@
   height: 95%;
   width: 90%;
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 0.5em;
+  left: 0.8em;
 }
 
 .footer {
   background-color: #000020;
   color: #c1c9c1;
-  padding: 15px;
+  padding: 1.2em;
 }
 
 .footer .row .col-lg-3 {
@@ -17,7 +17,7 @@
 }
 
 .socialMediaLinks {
-  font-size: 24px;
+  font-size: 1.5em;
   color: #c1c9c1;
   text-align: center;
   border-left: 2px solid white;
@@ -33,7 +33,7 @@
 }
 
 #footer-right-3 {
-  font-size: 18px;
+  font-size: 1.1em;
   border-left: 2px solid white;
 }
 
@@ -72,7 +72,7 @@
 
 .updateMeBtn {
   float:right;
-  font-size: 12px;
+  font-size: 0.7em;
 }
 
 @media only screen and (max-width: 1079px) {
@@ -84,13 +84,13 @@
   .forSmallScreen {
     text-align: center;
     display: block !important;
-    height: 72px;
+    height: 5em;
   }
 
-  .forSmallScreen a{
+  .forSmallScreen a {
     color: white;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 1.25em;
+    margin-right: 1.25em;
   }
 
   .forSmallScreen a:hover {
@@ -98,7 +98,7 @@
   }
 
   #copyrightId {
-    font-size: 10px;
+    font-size: 0.625em;
   }
 
 }

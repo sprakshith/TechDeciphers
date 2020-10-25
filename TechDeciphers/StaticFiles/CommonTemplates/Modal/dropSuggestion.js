@@ -4,6 +4,10 @@ $(document).ready(function() {
     $("#openDropSuggestionModal").modal();
   });
 
+  $("#dropSuggestion2").click(function(){
+    $("#openDropSuggestionModal").modal();
+  });
+
   $('#submitSuggestionButtom').click(function() {
       var flag = false;
       var email = $('#emailAddress').val();
