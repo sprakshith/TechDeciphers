@@ -36,7 +36,7 @@ def topXForm(request):
     return render(request, 'TechDeciphers_TopX/topXForm.html', {'form' : form})
 
 def getArticlePostContents(request):
-    articleId = request.POST.get('articlePrimaryId', None)
+    articleId = request.GET.get('articlePrimaryId', None)
     myArticle = TopX.objects.filter(topXId = articleId)[0]
     myArticleContents = {
                             'articleImage' : myArticle.topXImage,

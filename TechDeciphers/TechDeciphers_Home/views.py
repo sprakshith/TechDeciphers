@@ -22,8 +22,8 @@ def index(request):
         return render(request, 'TechDeciphers_Home/home.html', homeDictionary)
 
 def getArticlePostContents(request):
-    articleId = request.POST.get('articlePrimaryId', None)
-    articleType = request.POST.get('articleType', None)
+    articleId = request.GET.get('articlePrimaryId', None)
+    articleType = request.GET.get('articleType', None)
     dataDictionary = {}
 
     if articleType == "gadget":

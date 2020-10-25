@@ -36,7 +36,7 @@ def gadgetsForm(request):
     return render(request, 'TechDeciphers_Gadgets/gadgetsForm.html', {'form' : form})
 
 def getArticlePostContents(request):
-    articleId = request.POST.get('articlePrimaryId', None)
+    articleId = request.GET.get('articlePrimaryId', None)
     myArticle = Gadgets.objects.filter(gadgetId = articleId)[0]
     myArticleContents = {
                             'articleImage' : myArticle.gadgetImage,

@@ -70,7 +70,7 @@
 
         </div>
 
-        <form action="getArticlePostContents/" id='getArticlePostContents' method="POST">
+        <form action="getArticlePostContents/" id='getArticlePostContents' method="GET">
           {% csrf_token %}
           <input type="hidden" id='articlePrimaryId' name="articlePrimaryId" value="">
         </form>

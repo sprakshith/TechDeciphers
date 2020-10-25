@@ -36,7 +36,7 @@ def leaksForm(request):
     return render(request, 'TechDeciphers_Leaks/leaksForm.html', {'form' : form})
 
 def getArticlePostContents(request):
-    articleId = request.POST.get('articlePrimaryId', None)
+    articleId = request.GET.get('articlePrimaryId', None)
     myArticle = Leaks.objects.filter(leakId = articleId)[0]
     myArticleContents = {
                             'articleImage' : myArticle.leakImage,

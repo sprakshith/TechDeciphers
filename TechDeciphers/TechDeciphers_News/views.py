@@ -42,7 +42,7 @@ def newsForm(request):
 #     return JsonResponse({})
 
 def getArticlePostContents(request):
-    articleId = request.POST.get('articlePrimaryId', None)
+    articleId = request.GET.get('articlePrimaryId', None)
     myArticle = News.objects.filter(newsId = articleId)[0]
     myArticleContents = {
                             'articleImage' : myArticle.newsImage,
