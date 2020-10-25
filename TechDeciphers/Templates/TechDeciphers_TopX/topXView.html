@@ -21,15 +21,15 @@
     <div class="container">
       <!-- Main Body -->
       <div class="row">
-        <div class="col-lg-9 col-sm-9">
+        <div class="col-lg-9 col-md-9 col-sm-12">
           <div class="row">
 
             {% if page_obj %}
               {% for topX in page_obj %}
-                <div class="col-sm-6">
+                <div class="col-lg-6 col-md-6 col-sm-12">
                   <div class="card">
                     <div class="row" onclick='openThisArticle("{{topX.topXId}}")'>
-                      <div class="col-lg-4">
+                      <div class="col-md-4 col-sm-4">
                         {% if topX.topXImage %}
                           <img class="card-img-top" src="{{ topX.topXImage.url }}" alt="Card image cap">
                         {% else %}
@@ -37,10 +37,10 @@
                         {% endif %}
                       </div>
 
-                      <div class="col-lg-8">
+                      <div class="col-md-8 col-sm-4">
                           <div class="card-body">
                             <h5 class="card-title">{{ topX.heading }}</h5>
-                            <p class="card-text">{{topX.miniHeading}}</p>
+                            <p class="card-text-class">{{topX.miniHeading}}</p>
                             <p class='articlePublishDetails'> <span class='articleAuthor'>{{topX.postAuthor}}</span> <span class='publishDate'>{{topX.postPublishDate}}</span> </p>
                           </div>
                       </div>

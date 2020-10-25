@@ -3,17 +3,17 @@
 
 {% if newsList %}
   {% for news in newsList %}
-    <div class="col-sm-6">
+    <div class="col-lg-6 col-md-6 col-sm-12">
       <div class="card">
         <div class="row" onclick='openThisArticle("{{news.newsId}}","news")'>
-          <div class="col-lg-4">
+          <div class="col-md-4 col-sm-4">
             <img class="card-img-top" src="{{ news.newsImage.url }}" alt="Card image cap">
           </div>
 
-          <div class="col-lg-8">
+          <div class="col-md-8 col-sm-4">
               <div class="card-body">
                 <h5 class="card-title">{{ news.heading }}</h5>
-                <p class="card-text">{{news.miniHeading}}</p>
+                <p class="card-text-class">{{news.miniHeading}}</p>
                 <p class='articlePublishDetails'> <span class='articleAuthor'>{{news.postAuthor}}</span> <span class='publishDate'>{{news.postPublishDate}}</span> </p>
               </div>
           </div>
