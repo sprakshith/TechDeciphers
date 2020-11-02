@@ -22,7 +22,7 @@ def index(request):
 
 
 @login_required(login_url="/errorPageNotFound/")
-def leaksForm(request):
+def codingForm(request):
     form = LeaksForm()
 
     if request.method == "POST":

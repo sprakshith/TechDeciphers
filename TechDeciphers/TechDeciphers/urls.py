@@ -22,11 +22,10 @@ from TechDeciphers_Home import views as homeViews
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('TechDeciphers_Home.urls')),
-    path('sms/',include('TechDeciphers_ChatBotService.urls')),
     path('gadgets/', include('TechDeciphers_Gadgets.urls')),
     path('news/', include('TechDeciphers_News.urls')),
-    path('topX/', include('TechDeciphers_TopX.urls')),
-    path('leaks/', include('TechDeciphers_Leaks.urls')),
+    path('trending/', include('TechDeciphers_TopX.urls')),
+    path('coding/', include('TechDeciphers_Leaks.urls')),
     path('getSearchedArticlePostContents/', homeViews.getSearchedArticlePostContents, name='getSearchedArticlePostContents'),
     path('getSearchedArticlePostContents/getArticlePostContents/', homeViews.getArticlePostContents, name='getArticlePostContents')
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

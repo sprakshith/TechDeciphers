@@ -6,6 +6,6 @@ app_name = 'TechDeciphers_TopX'
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('topXForm/', views.topXForm, name='topXForm'),
+    path('trendingForm/', views.trendingForm, name='trendingForm'),
     path('getArticlePostContents/', views.getArticlePostContents, name='getArticlePostContents')
 ]

@@ -6,6 +6,6 @@ app_name = 'TechDeciphers_Leaks'
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('leaksForm/', views.leaksForm, name='leaksForm'),
+    path('codingForm/', views.codingForm, name='codingForm'),
     path('getArticlePostContents/', views.getArticlePostContents, name='getArticlePostContents'),
 ]

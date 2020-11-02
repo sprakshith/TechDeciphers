@@ -9,8 +9,8 @@
           <ul class="navbar-nav mr-auto">
             <li class="nav-item"><a class="nav-link" href="{% url 'TechDeciphers_Gadgets:index' %}">Gadgets</a></li>
             <li class="nav-item"><a class="nav-link" href="{% url 'TechDeciphers_News:index' %}">News</a></li>
-            <li class="nav-item"><a class="nav-link" href="{% url 'TechDeciphers_TopX:index' %}">Top X</a></li>
-            <li class="nav-item"><a class="nav-link" href="{% url 'TechDeciphers_Leaks:index' %}">Leaks</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'TechDeciphers_TopX:index' %}">Trending</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'TechDeciphers_Leaks:index' %}">Coding</a></li>
           </ul>
 
           <form action="/getSearchedArticlePostContents/" method="POST" class="form-inline my-2 my-lg-0" id='searchArticleFormId'>
@@ -34,9 +34,9 @@
       <a href="{% url 'TechDeciphers_Home:index' %}">TechDeciphers</a>
       <a href="{% url 'TechDeciphers_Gadgets:index' %}">Gadgets</a>
       <a href="{% url 'TechDeciphers_News:index' %}">News</a>
-      <a href="{% url 'TechDeciphers_TopX:index' %}">Top X</a>
-      <a href="{% url 'TechDeciphers_Leaks:index' %}">Leaks</a>
-      <a href="#">About Us</a>
+      <a href="{% url 'TechDeciphers_TopX:index' %}">Trending</a>
+      <a href="{% url 'TechDeciphers_Leaks:index' %}">Coding</a>
+      <a href="{% url 'TechDeciphers_Home:aboutUsPage' %}">About Us</a>
     </div>
   </div>
 </div>

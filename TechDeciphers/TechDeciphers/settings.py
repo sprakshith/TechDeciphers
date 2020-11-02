@@ -45,8 +45,7 @@ INSTALLED_APPS = [
     'TechDeciphers_Gadgets',
     'TechDeciphers_News',
     'TechDeciphers_TopX',
-    'TechDeciphers_Leaks',
-    'TechDeciphers_ChatBotService'
+    'TechDeciphers_Leaks'
 ]
 
 MIDDLEWARE = [

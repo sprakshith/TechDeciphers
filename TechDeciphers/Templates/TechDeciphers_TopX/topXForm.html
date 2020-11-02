@@ -27,13 +27,13 @@
 
           <form action="" class="article-form-class" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
-            <p><label for="id_heading">TopX Name:</label>
+            <p><label for="id_heading">Trending Name:</label>
             {{form.heading}}</p>
 
             <p><label for="id_miniHeading">Mini Heading:</label>
             {{form.miniHeading}}</p>
 
-            <p><label for="id_typeOfNews">Type of TopX:</label>
+            <p><label for="id_typeOfNews">Category:</label>
             {{form.typeOfTopX}}</p>
 
             <p><label for="id_completeContent">Content:</label>

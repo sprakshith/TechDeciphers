@@ -22,7 +22,7 @@ def index(request):
 
 
 @login_required(login_url="/errorPageNotFound/")
-def topXForm(request):
+def trendingForm(request):
     form = TopXForm()
 
     if request.method == "POST":
