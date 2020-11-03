@@ -29,7 +29,7 @@ def trendingForm(request):
         form = TopXForm(data=request.POST, files=request.FILES)
         if form.is_valid():
             form.save(commit=True)
-            return redirect('/topX')
+            return redirect('/trending')
         else:
             print(form.errors)
 

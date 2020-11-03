@@ -29,7 +29,7 @@ def codingForm(request):
         form = LeaksForm(data=request.POST, files=request.FILES)
         if form.is_valid():
             form.save(commit=True)
-            return redirect('/leaks')
+            return redirect('/coding')
         else:
             print(form.errors)
 
