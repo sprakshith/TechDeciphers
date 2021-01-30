@@ -1,9 +1,13 @@
 from django.http import JsonResponse
+from Notebooks.models import Notebook
+from Tutorials.models import Tutorial
 from django.shortcuts import render, redirect
 from TechDeciphers_Home.models import DropSuggestionModel, KeepMeUpdatedEmail
 
 def index(request):
-    homeDictionary = {}
+    myNotebooks = Notebook.objects.filter(isPublished = True).order_by('-postPublishDate')[:2]
+    tutorials = Tutorial.objects.filter(isPublished = True).order_by('-postPublishDate')[:2]
+    homeDictionary = {'myNotebooks' : myNotebooks, 'tutorials' : tutorials}
     return render(request, 'TechDeciphers_Home/home.html', homeDictionary)
 
 def dropSuggestion(request):
@@ -24,9 +28,6 @@ def keepMeUpdated(request):
         modelInstance.save()
 
     return JsonResponse({'Message' : 'Object Created Succesfully'})
-
-def error404PageNotFound(request):
-    return render(request, 'CommonTemplates/Error_Pages/loginRequired.html', {})
 
 def aboutUsPage(request):
     return render(request, 'CommonTemplates/AboutUs/aboutUs.html', {})

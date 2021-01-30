@@ -22,8 +22,8 @@ from TechDeciphers_Home import views as homeViews
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('TechDeciphers_Home.urls')),
-    #path('codeSamples/', include('TechDeciphers_News.urls')),
-    #path('notebooks/', include('TechDeciphers_Gadgets.urls')),
+    path('myNotebooks/', include('Notebooks.urls')),
+    path('tutorials/', include('Tutorials.urls')),
     #path('getSearchedArticlePostContents/', homeViews.getSearchedArticlePostContents, name='getSearchedArticlePostContents'),
     #path('getSearchedArticlePostContents/getArticlePostContents/', homeViews.getArticlePostContents, name='getArticlePostContents')
-]# + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

@@ -2,94 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4b74f15-3bf8-45ad-9404-e3d0a9f5bb16" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/MediaFolder/TechDeciphers_Gadgets/SamsungPhone.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/MediaFolder/TechDeciphers_Gadgets/Tesla.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/MediaFolder/TechDeciphers_Gadgets/python.jfif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/MediaFolder/TechDeciphers_Leaks/Tesla.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/MediaFolder/TechDeciphers_Leaks/Tesla_0BFNZar.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/MediaFolder/TechDeciphers_News/Tesla.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/MediaFolder/TechDeciphers_News/Tesla_uPhLLv4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/MediaFolder/TechDeciphers_TopX/Tesla.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/MediaFolder/TechDeciphers_TopX/Tesla_VkiSJkP.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/StaticFiles/TechDeciphers_News/Css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/StaticFiles/TechDeciphers_News/Css/newsForm.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/StaticFiles/TechDeciphers_News/Js/newsForm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/StaticFiles/TechDeciphers_News/Js/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/StaticFiles/TechDeciphers_TopX/Css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/StaticFiles/TechDeciphers_TopX/Css/topXForm.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/StaticFiles/TechDeciphers_TopX/Js/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/StaticFiles/TechDeciphers_TopX/Js/topXForm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/TechDeciphers/TechDeciphers/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TechDeciphers/Notebooks/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/TechDeciphers/Notebooks/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TechDeciphers/Notebooks/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/TechDeciphers/Notebooks/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/TechDeciphers/TechDeciphers/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_Gadgets/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_Gadgets/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_Gadgets/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_Gadgets/form.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_Gadgets/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_Gadgets/migrations/0002_auto_20200610_2152.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_Gadgets/migrations/0003_auto_20200610_2156.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_Gadgets/migrations/0004_auto_20200610_2240.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_Gadgets/migrations/0005_auto_20200711_1951.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_Gadgets/migrations/0006_auto_20200713_2343.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_Gadgets/migrations/0007_auto_20200718_1511.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_Gadgets/migrations/0008_auto_20200718_1533.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_Gadgets/migrations/0009_gadgets_ispublished.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_Gadgets/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_Gadgets/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_Gadgets/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_Gadgets/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_Gadgets/views.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_Home/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_Home/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_Home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_Home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_Leaks/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_Leaks/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_Leaks/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_Leaks/form.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_Leaks/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_Leaks/migrations/0002_auto_20200815_2343.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_Leaks/migrations/0003_leaks_ispublished.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_Leaks/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_Leaks/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_Leaks/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_Leaks/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_Leaks/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_News/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_News/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_News/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_News/form.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_News/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_News/migrations/0002_auto_20200711_2025.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_News/migrations/0003_auto_20200815_2343.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_News/migrations/0004_news_ispublished.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_News/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_News/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_News/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_News/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_News/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_TopX/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_TopX/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_TopX/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_TopX/form.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_TopX/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_TopX/migrations/0002_auto_20200815_2343.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_TopX/migrations/0003_topx_ispublished.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_TopX/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_TopX/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_TopX/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_TopX/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/TechDeciphers_TopX/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/Templates/TechDeciphers_Gadgets/gadgetTry.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/Templates/TechDeciphers_Gadgets/gadgetsForm.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/Templates/TechDeciphers_Gadgets/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/Templates/TechDeciphers_Leaks/leaks.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/Templates/TechDeciphers_Leaks/leaksForm.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/Templates/TechDeciphers_Leaks/leaksView.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/Templates/TechDeciphers_News/news.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/Templates/TechDeciphers_News/newsForm.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/Templates/TechDeciphers_News/newsView.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/Templates/TechDeciphers_TopX/topXForm.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/Templates/TechDeciphers_TopX/topXView.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/TechDeciphers/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TechDeciphers/Templates/TechDeciphers_Home/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/TechDeciphers/Templates/TechDeciphers_Home/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TechDeciphers/Templates/TechDeciphers_Home/homeForMyNotebooks.html" beforeDir="false" afterPath="$PROJECT_DIR$/TechDeciphers/Templates/TechDeciphers_Home/homeForMyNotebooks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TechDeciphers/Templates/TechDeciphers_Home/homeForTutorials.html" beforeDir="false" afterPath="$PROJECT_DIR$/TechDeciphers/Templates/TechDeciphers_Home/homeForTutorials.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TechDeciphers/Tutorials/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/TechDeciphers/Tutorials/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
