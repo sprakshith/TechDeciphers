@@ -9,5 +9,5 @@ urlpatterns = [
     path('dropSuggestion/', views.dropSuggestion, name='dropSuggestion'),
     path('keepMeUpdated/', views.keepMeUpdated, name='keepMeUpdated'),
     path('errorPageNotFound/', views.error404PageNotFound, name='error404PageNotFound'),
-    path('getArticlePostContents/', views.getArticlePostContents, name='getArticlePostContents'),
+    # path('getArticlePostContents/', views.getArticlePostContents, name='getArticlePostContents'),
 ]

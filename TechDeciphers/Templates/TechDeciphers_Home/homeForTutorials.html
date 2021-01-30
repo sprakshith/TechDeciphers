@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+
+{% if leaksList %}
+  {% for leak in leaksList %}
+    <div class="col-lg-6 col-md-6 col-sm-12">
+      <div class="card">
+        <div class="row" onclick='openThisArticle("{{leak.leakId}}","leaks")'>
+          <div class="col-md-4 col-sm-4">
+            <img class="card-img-top" src="{{ leak.leakImage.url }}" alt="Card image cap">
+          </div>
+
+          <div class="col-md-8 col-sm-4">
+              <div class="card-body">
+                <h5 class="card-title">{{ leak.heading }}</h5>
+                <p class="card-text-class">{{leak.miniHeading}}</p>
+                <p class='articlePublishDetails'> <span class='articleAuthor'>{{leak.postAuthor}}</span> <span class='publishDate'>{{leak.postPublishDate}}</span> </p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+{% else %}
+    <p style="position: relative;left: 30%;">Sorry, None of the articles Matched your Search Entry.</p>
+{% endif %}

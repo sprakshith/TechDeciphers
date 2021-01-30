@@ -15,17 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf import settings
-from django.conf.urls.static import static
 from django.urls import path, include
+from django.conf.urls.static import static
 from TechDeciphers_Home import views as homeViews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('TechDeciphers_Home.urls')),
-    path('gadgets/', include('TechDeciphers_Gadgets.urls')),
-    path('news/', include('TechDeciphers_News.urls')),
-    path('trending/', include('TechDeciphers_TopX.urls')),
-    path('coding/', include('TechDeciphers_Leaks.urls')),
-    path('getSearchedArticlePostContents/', homeViews.getSearchedArticlePostContents, name='getSearchedArticlePostContents'),
-    path('getSearchedArticlePostContents/getArticlePostContents/', homeViews.getArticlePostContents, name='getArticlePostContents')
-] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+    #path('codeSamples/', include('TechDeciphers_News.urls')),
+    #path('notebooks/', include('TechDeciphers_Gadgets.urls')),
+    #path('getSearchedArticlePostContents/', homeViews.getSearchedArticlePostContents, name='getSearchedArticlePostContents'),
+    #path('getSearchedArticlePostContents/getArticlePostContents/', homeViews.getArticlePostContents, name='getArticlePostContents')
+]# + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
