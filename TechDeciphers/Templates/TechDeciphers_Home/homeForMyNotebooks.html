@@ -2,25 +2,24 @@
 {% load static %}
 
 {% if myNotebooks %}
-  {% for notebook in myNotebooks %}
-  <div class="col-lg-6 col-md-6 col-sm-12">
+{% for notebook in myNotebooks %}
+<div class="col-sm-6 col-md-4">
     <div class="card">
-      <div class="row" onclick='openThisArticle("{{notebook.notebook_id}}","leaks")'>
-        <div class="col-md-4 col-sm-4">
-          <img class="card-img-top" src="{{ notebook.notebook_image.url }}" alt="Card image cap">
+        <div class="image">
+            <img src="{{ notebook.notebook_image.url }}" />
         </div>
-
-        <div class="col-md-8 col-sm-4">
-            <div class="card-body">
-              <h5 class="card-title">{{ notebook.heading }}</h5>
-              <p class="card-text-class">{{notebook.description}}</p>
-              <p class='articlePublishDetails'> <span class='articleAuthor'>{{notebook.postAuthor}}</span> <span class='publishDate'>{{notebook.postPublishDate}}</span> </p>
+        <div class="card-inner">
+            <div class="header">
+                <h5 data-toggle="tooltip" data-placement="bottom" title="{{notebook.heading}}">{{ notebook.heading }}</h5><hr>
+                <h6 data-toggle="tooltip" data-placement="bottom" title="{{notebook.description}}">{{notebook.description}}</h6><hr>
+            </div>
+            <div class="content">
+                <p data-toggle="tooltip" data-placement="bottom" title="{{notebook.postAuthor}} - {{notebook.postPublishDate}}">{{notebook.postAuthor}} - {{notebook.postPublishDate}}</p>
             </div>
         </div>
-      </div>
     </div>
-  </div>
-  {% endfor %}
+</div>
+{% endfor %}
 {% else %}
-  <p style="position: relative;left: 30%;">Sorry, None of the articles Matched your Search Entry.</p>
+<p style="position: relative;left: 30%;">Sorry, None of the articles Matched your Search Entry.</p>
 {% endif %}

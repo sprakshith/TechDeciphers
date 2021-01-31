@@ -5,8 +5,8 @@ from django.shortcuts import render, redirect
 from TechDeciphers_Home.models import DropSuggestionModel, KeepMeUpdatedEmail
 
 def index(request):
-    myNotebooks = Notebook.objects.filter(isPublished = True).order_by('-postPublishDate')[:2]
-    tutorials = Tutorial.objects.filter(isPublished = True).order_by('-postPublishDate')[:2]
+    myNotebooks = Notebook.objects.filter(isPublished = True).order_by('-postPublishDate')[:3]
+    tutorials = Tutorial.objects.filter(isPublished = True).order_by('-postPublishDate')[:3]
     homeDictionary = {'myNotebooks' : myNotebooks, 'tutorials' : tutorials}
     return render(request, 'TechDeciphers_Home/home.html', homeDictionary)
 

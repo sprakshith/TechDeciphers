@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  
   $('#id_completeContent').summernote({
       toolbar: [
         ['style', ['bold', 'italic', 'underline', 'clear']],

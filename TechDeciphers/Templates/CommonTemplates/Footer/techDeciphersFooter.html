@@ -10,17 +10,17 @@
       </div>
 
       <div class="col-lg-3 socialMediaLinks">
-          <p><a href="#"><span>My Notebooks</span></a></p>
-          <p><a href="#"><span>Tutorials</span></a></p>
+          <p><a href="{% url 'Notebooks:index' %}"><span>My Notebooks</span></a></p>
+          <p><a href="{% url 'Tutorials:index' %}"><span>Tutorials</span></a></p>
           <p><a href="https://github.com/sprakshith/DataScienceNotebooks" target="_blank"><span>GitHub</span></a></p>
           <p><a href="https://www.kaggle.com/sprakshith" target="_blank"><span>My Kaggle Account</span></a></p>
       </div>
 
       <div class="col-lg-3 socialMediaLinks">
-          <p><a href="https://www.facebook.com/techDeciphers/"><span id='facebook'><i class="fa fa-facebook-square" aria-hidden="true"></i></span> Facebook</a></p>
-          <p><a href="https://twitter.com/tech_decipher/"><span id='twitter'><i class="fa fa-twitter" aria-hidden="true"></i></span> Twitter</a></p>
-          <p><a href="https://www.instagram.com/tech_deciphers/"><span id='instagram'><i class="fa fa-instagram" aria-hidden="true"></i></span> Instagram</a></p>
-          <p><a href="https://youtube.com"><span id='youtube'><i class="fa fa-youtube" aria-hidden="true"></i></span> Youtube</a></p>
+          <p><a href="https://www.facebook.com/techDeciphers/" target="_blank"><span id='facebook'><i class="fa fa-facebook-square" aria-hidden="true"></i></span> Facebook</a></p>
+          <p><a href="https://twitter.com/tech_decipher/" target="_blank"><span id='twitter'><i class="fa fa-twitter" aria-hidden="true"></i></span> Twitter</a></p>
+          <p><a href="https://www.instagram.com/tech_deciphers/" target="_blank"><span id='instagram'><i class="fa fa-instagram" aria-hidden="true"></i></span> Instagram</a></p>
+          <p><a href="https://youtube.com" target="_blank"><span id='youtube'><i class="fa fa-youtube" aria-hidden="true"></i></span> Youtube</a></p>
       </div>
 
       <div class="col-lg-3" id="footer-right-3">
@@ -48,8 +48,6 @@
 
   <!-- Support Us -->
   {% include "CommonTemplates/Modals/supportUs.html" %}
-
-
 
 <!-- Css Link For Footer -->
 <link rel="stylesheet" href="{% static "CommonTemplates/Footer/techDeciphersFooter.css" %}">
