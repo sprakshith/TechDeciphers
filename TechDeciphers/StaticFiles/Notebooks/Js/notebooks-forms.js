@@ -16,4 +16,6 @@ $(document).ready(function() {
 
   $('.note-editable').css({'height':'400px','background-color':'white'});
 
+  $('.form-datepicker').flatpickr();
+
 });

@@ -13,6 +13,11 @@
     <link rel="stylesheet" href="{% static "Notebooks/Css/notebooks-forms.css" %}">
     <script src="{% static "Notebooks/Js/notebooks-forms.js" %}"></script>
 
+    <!-- Date Picker -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_blue.css">
+
   </head>
   <body style='background-color: #f5f5f5'>
 
@@ -50,6 +55,11 @@
         </div>
       </div>
     </div>
+
+    <form action="getArticlePostContents/" id='getArticlePostContents' method="GET">
+      {% csrf_token %}
+      <input type="hidden" id='articlePrimaryId' name="articlePrimaryId" value="">
+    </form>
 
     <!-- Footer -->
     {% include "CommonTemplates/Footer/techDeciphersFooter.html" %}

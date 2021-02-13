@@ -28,7 +28,7 @@
 
             {% if page_obj %}
               {% for notebook in page_obj %}
-              <div class="col-sm-6 col-md-4">
+              <div class="col-sm-6 col-md-4" onclick='openThisArticle("{{notebook.notebook_id}}")'>
                   <div class="card">
                       <div class="image">
                           <img src="{{ notebook.notebook_image.url }}" />
@@ -67,14 +67,14 @@
 
       </div>
 
-        <form action="getArticlePostContents/" id='getArticlePostContents' method="GET">
-          {% csrf_token %}
-          <input type="hidden" id='articlePrimaryId' name="articlePrimaryId" value="">
-        </form>
+      <form action="get_article_contents/" id='get_article_post_contents' method="GET">
+        {% csrf_token %}
+        <input type="hidden" id='article_primary_id' name="article_primary_id" value="">
+      </form>
 
-        <div class="col-lg-3">
-          <!-- AdSense Code will be added here. -->
-        </div>
+      <div class="col-lg-3">
+        <!-- AdSense Code will be added here. -->
+      </div>
 
       </div>
     </div>

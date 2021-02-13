@@ -3,7 +3,7 @@
 
 {% if myNotebooks %}
 {% for notebook in myNotebooks %}
-<div class="col-sm-6 col-md-4">
+<div class="col-sm-6 col-md-4" onclick='openThisArticle("{{notebook.notebook_id}}","NOTEBOOK")'>
     <div class="card">
         <div class="image">
             <img src="{{ notebook.notebook_image.url }}" />

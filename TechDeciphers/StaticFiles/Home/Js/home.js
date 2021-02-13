@@ -4,10 +4,8 @@ $(document).ready(function(){
 
 });
 
-function openThisArticle(articleId, articleType) {
-
-  $('#articlePrimaryId').val(articleId);
-  $('#articleType').val(articleType);
-  $('#getArticlePostContents').submit();
-
+function openThisArticle(article_id, article_type) {
+  $('#article_primary_id').val(article_id);
+  $('#article_type').val(article_type);
+  $('#get_article_post_contents').submit();
 }

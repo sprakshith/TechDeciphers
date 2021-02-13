@@ -9,6 +9,10 @@
           <ul class="navbar-nav mr-auto">
             <li class="nav-item"><a class="nav-link" href="{% url 'Notebooks:index' %}">My Notebooks</a></li>
             <li class="nav-item"><a class="nav-link" href="{% url 'Tutorials:index' %}">Tutorials</a></li>
+            {% if user.is_authenticated %}
+            <li class="nav-item"><a class="nav-link" href="{% url 'Notebooks:notebook_form' %}">Add Notebook</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'Tutorials:tutorial_form' %}">Add Tutorial</a></li>
+            {% endif %}
           </ul>
 
           <form action="/getSearchedArticlePostContents/" method="POST" class="form-inline my-2 my-lg-0" id='searchArticleFormId'>

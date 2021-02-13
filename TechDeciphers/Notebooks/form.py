@@ -10,5 +10,5 @@ class NotebookForm(forms.ModelForm):
             'description' : forms.TextInput(attrs = {'class' : 'form-control'}),
             'content' : forms.Textarea(attrs = {'class' : 'form-control', 'rows' : '28'}),
             'postAuthor' : forms.TextInput(attrs = {'class' : 'form-control'}),
-            'postPublishDate' : forms.TextInput(attrs = {'class' : 'form-control'})
+            'postPublishDate' : forms.TextInput(attrs = {'class' : 'form-control form-datepicker'})
         }

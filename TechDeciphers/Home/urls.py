@@ -8,5 +8,5 @@ urlpatterns = [
     path('aboutUs/', views.aboutUsPage, name='aboutUsPage'),
     path('dropSuggestion/', views.dropSuggestion, name='dropSuggestion'),
     path('keepMeUpdated/', views.keepMeUpdated, name='keepMeUpdated'),
-    # path('getArticlePostContents/', views.getArticlePostContents, name='getArticlePostContents'),
+    path('get_article_post_contents/', views.get_article_contents, name='get_article_contents'),
 ]

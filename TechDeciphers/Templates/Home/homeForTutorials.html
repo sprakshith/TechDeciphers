@@ -3,7 +3,7 @@
 
 {% if tutorials %}
 {% for tutorial in tutorials %}
-<div class="col-sm-6 col-md-4">
+<div class="col-sm-6 col-md-4" onclick='openThisArticle("{{tutorial.tutorial_id}}","TUTORIAL")'>
     <div class="card">
         <div class="image">
             <img src="{{ tutorial.tutorial_image.url }}" />
