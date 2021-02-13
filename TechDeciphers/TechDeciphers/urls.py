@@ -17,12 +17,12 @@ from django.contrib import admin
 from django.conf import settings
 from django.urls import path, include
 from django.conf.urls.static import static
-from TechDeciphers_Home import views as homeViews
+from Home import views as homeViews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('TechDeciphers_Home.urls')),
-    path('myNotebooks/', include('Notebooks.urls')),
+    path('', include('Home.urls')),
+    path('my_notebooks/', include('Notebooks.urls')),
     path('tutorials/', include('Tutorials.urls')),
     #path('getSearchedArticlePostContents/', homeViews.getSearchedArticlePostContents, name='getSearchedArticlePostContents'),
     #path('getSearchedArticlePostContents/getArticlePostContents/', homeViews.getArticlePostContents, name='getArticlePostContents')

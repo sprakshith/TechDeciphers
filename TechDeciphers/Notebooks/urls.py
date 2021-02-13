@@ -4,5 +4,6 @@ from Notebooks import views
 app_name = 'Notebooks'
 
 urlpatterns = [
-    path('', views.index, name='index')
+    path('', views.index, name='index'),
+    path('add_notebook/', views.notebook_form, name='notebook_form')
 ]

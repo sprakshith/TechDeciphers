@@ -4,7 +4,7 @@
 <!-- Navigation Bar -->
 <div class='jayNavigationBar'>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="{% url 'TechDeciphers_Home:index' %}">TechDeciphers</a>
+      <a class="navbar-brand" href="{% url 'Home:index' %}">TechDeciphers</a>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item"><a class="nav-link" href="{% url 'Notebooks:index' %}">My Notebooks</a></li>
@@ -27,11 +27,11 @@
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
       <i class="fa fa-bars"></i>
     </a>
-    <a href="{% url 'TechDeciphers_Home:index' %}" class="active" id='techDeciphersHeading'>TechDeciphers</a>
+    <a href="{% url 'Home:index' %}" class="active" id='techDeciphersHeading'>TechDeciphers</a>
     <div id="myLinks">
-      <a href="#">TechDeciphers</a>
-      <a href="#">My Notebooks</a>
-      <a href="#">Tutorials</a>
+      <a href="{% url 'Home:index' %}">TechDeciphers</a>
+      <a href="{% url 'Notebooks:index' %}">My Notebooks</a>
+      <a href="{% url 'Tutorials:index' %}">Tutorials</a>
     </div>
   </div>
 </div>

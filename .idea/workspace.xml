@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4b74f15-3bf8-45ad-9404-e3d0a9f5bb16" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TechDeciphers/Templates/CommonTemplates/NavigationBar/navigationBar.html" beforeDir="false" afterPath="$PROJECT_DIR$/TechDeciphers/Templates/CommonTemplates/NavigationBar/navigationBar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TechDeciphers/Templates/TechDeciphers_Home/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/TechDeciphers/Templates/TechDeciphers_Home/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/Templates/TechDeciphers_Home/homeForMyNotebooks.html" beforeDir="false" afterPath="$PROJECT_DIR$/TechDeciphers/Templates/TechDeciphers_Home/homeForMyNotebooks.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/Templates/TechDeciphers_Home/homeForTutorials.html" beforeDir="false" afterPath="$PROJECT_DIR$/TechDeciphers/Templates/TechDeciphers_Home/homeForTutorials.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechDeciphers/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/TechDeciphers/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

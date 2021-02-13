@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My Notebooks</title>
+
+    <!-- Common Imports Like Bootstrap and Jquery -->
+    {% include "CommonTemplates/CommonImports/allImports.html" %}
+
+    <!-- CSS and JS related to this Page -->
+    <link rel="stylesheet" href="{% static "Tutorials/Css/tutorials-forms.css" %}">
+    <script src="{% static "Tutorials/Js/tutorials-forms.js" %}"></script>
+
+  </head>
+  <body style='background-color: #f5f5f5'>
+
+    <!-- Navigation Bar -->
+    {% include "CommonTemplates/NavigationBar/navigationBar.html" %}
+
+    <div class="container">
+      <!-- Main Body Starts -->
+      <div class="row">
+        <div class="col-lg-12">
+
+          <form action="" class="article-form-class" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <p><label for="id_heading">Heading:</label>
+            {{form.heading}}</p>
+
+            <p><label for="id_miniHeading">Description:</label>
+            {{form.description}}</p>
+
+            <p><label for="id_completeContent">Content:</label>
+            {{form.content}}</p>
+
+            <p><label for="id_newsImage">Upload Image:</label>
+            {{form.tutorial_image}}</p>
+
+            <p><label for="id_postAuthor">Author:</label>
+            {{form.postAuthor}}</p>
+
+            <p><label for="id_postPublishDate">Publish Date:</label>
+            {{form.postPublishDate}}</p>
+
+            <p id="articleFormButtons"> <button type="button" class="btn btn-outline-info my-2 my-sm-0" id="previewPost">Preview Post</button> <button type="submit" class="btn btn-outline-info my-2 my-sm-0" id="uploadPost">Upload Post</button> </p>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    {% include "CommonTemplates/Footer/techDeciphersFooter.html" %}
+
+  </body>
+</html>

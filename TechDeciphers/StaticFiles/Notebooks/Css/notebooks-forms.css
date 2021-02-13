@@ -1,0 +1,19 @@
+.article-form-class {
+  margin-top: 15px;
+}
+
+.form-control {
+  margin-bottom: 10px;
+}
+
+#articleFormButtons {
+  float: right;
+}
+
+#previewPost {
+  margin-right: 5px;
+}
+
+#uploadPost {
+  margin-left: 5px;
+}
