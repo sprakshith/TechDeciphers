@@ -1,3 +1,14 @@
+$(document).ready(function(){
+
+  $('.navigationSearchBar').autoComplete({
+    resolverSettings: {
+        url: '/get_tutorials_heading/'
+    }
+  });
+
+});
+
+
 function myFunction() {
   var navigationLinks = document.getElementById("myLinks");
   if (navigationLinks.style.display === "block") {

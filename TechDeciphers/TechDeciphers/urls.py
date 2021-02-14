@@ -15,15 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf import settings
+from Home import views as home_views
 from django.urls import path, include
 from django.conf.urls.static import static
-from Home import views as homeViews
+from Tutorials import views as tutorial_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('Home.urls')),
     path('my_notebooks/', include('Notebooks.urls')),
     path('tutorials/', include('Tutorials.urls')),
-    #path('getSearchedArticlePostContents/', homeViews.getSearchedArticlePostContents, name='getSearchedArticlePostContents'),
-    #path('getSearchedArticlePostContents/getArticlePostContents/', homeViews.getArticlePostContents, name='getArticlePostContents')
+    path('get_searched_article_content/', home_views.get_searched_article_content, name='get_searched_article_content'),
+    path('get_searched_article_content/get_article_contents/', tutorial_views.get_article_contents, name='get_article_contents')
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

@@ -6,7 +6,8 @@ app_name = 'Home'
 urlpatterns = [
     path('', views.index, name='index'),
     path('aboutUs/', views.aboutUsPage, name='aboutUsPage'),
-    path('dropSuggestion/', views.dropSuggestion, name='dropSuggestion'),
     path('keepMeUpdated/', views.keepMeUpdated, name='keepMeUpdated'),
-    path('get_article_post_contents/', views.get_article_contents, name='get_article_contents'),
+    path('dropSuggestion/', views.dropSuggestion, name='dropSuggestion'),
+    path('get_tutorials_heading/', views.get_tutorials_heading, name='get_tutorials_heading'),
+    path('get_article_post_contents/', views.get_article_contents, name='get_article_contents')
 ]

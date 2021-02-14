@@ -41,3 +41,4 @@ def get_article_contents(request):
                         }
     data_dictionary = {'my_article_contents' : my_article_contents}
     return render(request, 'CommonTemplates/ArticlePost/article_post.html', data_dictionary)
+    

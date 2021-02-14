@@ -1,6 +1,7 @@
 from django.http import JsonResponse
 from Notebooks.models import Notebook
 from Tutorials.models import Tutorial
+from django.core.paginator import Paginator
 from django.shortcuts import render, redirect
 from Home.models import DropSuggestionModel, KeepMeUpdatedEmail
 
@@ -41,6 +42,24 @@ def get_article_contents(request):
         data_dictionary = {'my_article_contents' : my_article_contents}
 
     return render(request, 'CommonTemplates/ArticlePost/article_post.html', data_dictionary)
+
+
+def get_searched_article_content(request):
+    searched_value = request.GET.get('search_article_name', None)
+    tutorials = Tutorial.objects.filter(heading__icontains = searched_value, isPublished = True)
+    paginator = Paginator(tutorials, 9)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    tutorialsDictionary = {'page_obj' : page_obj}
+
+    return render(request, 'Tutorials/tutorials.html', tutorialsDictionary)
+
+
+def get_tutorials_heading(request):
+    searched_value = request.GET.get('q', 'pan')
+    tutorials = Tutorial.objects.filter(heading__icontains = searched_value, isPublished = True)
+    result_list = [tutorial.heading for tutorial in tutorials]
+    return JsonResponse(result_list, safe=False)
 
 
 def dropSuggestion(request):
