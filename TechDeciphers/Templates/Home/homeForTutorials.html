@@ -3,7 +3,7 @@
 
 {% if tutorials %}
 {% for tutorial in tutorials %}
-<div class="col-sm-6 col-md-4" onclick='openThisArticle("{{tutorial.tutorial_id}}","TUTORIAL")'>
+<div class="col-sm-6 col-md-4" onclick="openThisArticle('/tutorials/get_article_contents/?article_primary_id={{tutorial.tutorial_id}}');">
     <div class="card">
         <div class="image">
             <img src="{{ tutorial.tutorial_image.url }}" />
@@ -21,5 +21,5 @@
 </div>
 {% endfor %}
 {% else %}
-    <p style="position: relative;left: 30%;">Sorry, None of the articles Matched your Search Entry.</p>
+<p>0 Tutorials Found</p>
 {% endif %}

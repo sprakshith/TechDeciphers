@@ -27,7 +27,7 @@
 
             {% if page_obj %}
               {% for tutorial in page_obj %}
-              <div class="col-sm-6 col-md-4" onclick='openThisArticle("{{tutorial.tutorial_id}}")'>
+              <div class="col-sm-6 col-md-4" onclick="openThisArticle('/tutorials/get_article_contents/?article_primary_id={{tutorial.tutorial_id}}');">
                   <div class="card">
                       <div class="image">
                           <img src="{{ tutorial.tutorial_image.url }}" />
@@ -44,6 +44,8 @@
                   </div>
               </div>
               {% endfor %}
+            {% else %}
+              <p>0 Tutorials Found</p>
             {% endif %}
 
           </div>
@@ -65,11 +67,6 @@
          </div>
 
       </div>
-
-      <form action="get_article_contents/" id='get_article_post_contents' method="GET">
-        {% csrf_token %}
-        <input type="hidden" id='article_primary_id' name="article_primary_id" value="">
-      </form>
 
       <div class="col-lg-3">
         <!-- AdSense Code will be added here. -->

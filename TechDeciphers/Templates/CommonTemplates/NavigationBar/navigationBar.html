@@ -15,11 +15,10 @@
             {% endif %}
           </ul>
 
-          <form action="/get_searched_article_content/" method="GET" class="form-inline my-2 my-lg-0" id='searchArticleFormId'>
-            {% csrf_token %}
-            <input class="form-control mr-sm-2 navigationSearchBar" type="search" name="search_article_name" placeholder="Search Tutorials" aria-label="Search">
-            <button class="btn btn-outline-info my-2 my-sm-0 navigationSearchBtn" type="submit">Search</button>
-          </form>
+          <div class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2 navigationSearchBar" type="search" id="search_article_name" placeholder="Search Tutorials" aria-label="Search">
+            <button class="btn btn-outline-info my-2 my-sm-0 navigationSearchBtn" type="button" onclick="searchArticles();">Search</button>
+          </div>
 
       </div>
   </nav>

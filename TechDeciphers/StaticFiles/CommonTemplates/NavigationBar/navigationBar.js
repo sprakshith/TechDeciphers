@@ -22,3 +22,8 @@ function myFunction() {
     $(".topnav").css({'height' : '16em'});
   }
 }
+
+
+function searchArticles() {
+  location.href="/get_searched_article_content/?search_article_name=" + $("#search_article_name").val();
+}

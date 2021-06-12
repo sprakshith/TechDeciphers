@@ -28,7 +28,7 @@
 
             {% if page_obj %}
               {% for notebook in page_obj %}
-              <div class="col-sm-6 col-md-4" onclick='openThisArticle("{{notebook.notebook_id}}")'>
+              <div class="col-sm-6 col-md-4" onclick="openThisArticle('/my_notebooks/get_article_contents/?article_primary_id={{notebook.notebook_id}}');">
                   <div class="card">
                       <div class="image">
                           <img src="{{ notebook.notebook_image.url }}" />
@@ -45,6 +45,8 @@
                   </div>
               </div>
               {% endfor %}
+            {% else %}
+              <p>0 Notebooks Found</p>
             {% endif %}
 
           </div>
