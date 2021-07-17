@@ -80,10 +80,36 @@ WSGI_APPLICATION = 'TechDeciphers.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+# The Below code is used for DBSqlite3
+# ------------------------------------------
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
+# The Below code is used for MySQL DATABASES - Local Host
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'techdeciphers',
+#         'USER': 'root',
+#         'PASSWORD': 'root',
+#         'HOST': 'localhost',
+#         'PORT':'3306'
+#     }
+# }
+
+# The Below code is used for MySQL DATABASES - Sever
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'sprakshith$techdeciphers',
+        'USER': 'sprakshith',
+        'PASSWORD': 'techroot',
+        'HOST': 'sprakshith.mysql.pythonanywhere-services.com',
+        'PORT':'3306'
     }
 }
 
