@@ -59,7 +59,7 @@ def get_further_read_article(article_id):
         further_read_article_id = notebooks_ids[min(range(len(notebooks_ids)), key = lambda i: abs(notebooks_ids[i]-article_id))]
         further_read_article = Notebook.objects.filter(notebook_id = further_read_article_id)[0]
 
-        notebook_dict = {
+        further_read_article_dict = {
             'further_read_article_id': further_read_article.notebook_id,
             'further_read_article_title': further_read_article.heading
         }
@@ -67,4 +67,4 @@ def get_further_read_article(article_id):
     except:
         pass
 
-    return notebook_dict
+    return further_read_article_dict
