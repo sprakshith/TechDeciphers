@@ -13,3 +13,14 @@
 #uploadPost {
   margin-left: 5px;
 }
+
+#id_isChildPage {
+  position: relative;
+  top: 4px;
+  width: 18px;
+  height: 20px;
+}
+
+.child-tutorial-information {
+  display: none;
+}

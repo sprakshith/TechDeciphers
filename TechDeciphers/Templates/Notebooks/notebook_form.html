@@ -65,4 +65,11 @@
     {% include "CommonTemplates/Footer/techDeciphersFooter.html" %}
 
   </body>
+
+  <script type="text/javascript">
+      $(document).ready(function(){
+        $("#id_postAuthor").val("{{request.user.get_full_name}}")
+      });
+  </script>
+
 </html>

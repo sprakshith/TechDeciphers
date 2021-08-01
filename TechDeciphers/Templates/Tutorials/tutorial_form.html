@@ -46,12 +46,52 @@
             <p><label for="id_postAuthor">Author:</label>
             {{form.postAuthor}}</p>
 
+            <p><label for="id_isChildPage">{{form.isChildPage}} Is Child Tutorial</label></p>
+
+            <div class="child-tutorial-information">
+              {% if parent_tutorials %}
+                <p>
+                  <label for="select-parent-id">Parent Id:</label>
+                  <select class="form-control" id="select-parent-id" name="parentId">
+                    <option value="0">Select Tutorial</option>
+                    {% for pt in parent_tutorials %}
+                    <option value="{{pt.tutorial_id}}">{{pt.heading}}</option>
+                    {% endfor %}
+                  </select>
+                </p>
+              {% else %}
+                <input type="hidden" name="parentId" value="0">
+              {% endif %}
+              {% if child_tutorials %}
+                <p>
+                  <label for="select-previous-post-id">Previous Post:</label>
+                  <select class="form-control" id="select-previous-post-id" name="previousTutorial">
+                    <option value="0">No Previous Post</option>
+                    {% for ct in child_tutorials %}
+                    <option value="{{ct.tutorial_id}}">{{ct.heading}}</option>
+                    {% endfor %}
+                  </select>
+                </p>
+                <p>
+                  <label for="select-next-post-id">Next Post:</label>
+                  <select class="form-control" id="select-next-post-id" name="nextTutorial">
+                    <option value="0">No Next Tutorial</option>
+                    {% for ct in child_tutorials %}
+                    <option value="{{ct.tutorial_id}}">{{ct.heading}}</option>
+                    {% endfor %}
+                  </select>
+                </p>
+              {% else %}
+                <input type="hidden" name="previousTutorial" value="0">
+                <input type="hidden" name="nextTutorial" value="0">
+              {% endif %}
+            </div>
+
             <p><label for="id_postPublishDate">Publish Date:</label>
             {{form.postPublishDate}}</p>
 
-            <p id="articleFormButtons"> <button type="button" class="btn btn-outline-info my-2 my-sm-0" id="previewPost">Preview Post</button> <button type="submit" class="btn btn-outline-info my-2 my-sm-0" id="uploadPost">Upload Post</button> </p>
+            <p id="articleFormButtons"><button type="submit" class="btn btn-outline-info my-2 my-sm-0" id="uploadPost">Upload Post</button></p>
           </form>
-
         </div>
       </div>
     </div>
@@ -60,4 +100,11 @@
     {% include "CommonTemplates/Footer/techDeciphersFooter.html" %}
 
   </body>
+
+  <script type="text/javascript">
+      $(document).ready(function(){
+        $("#id_postAuthor").val("{{request.user.get_full_name}}")
+      });
+  </script>
+
 </html>

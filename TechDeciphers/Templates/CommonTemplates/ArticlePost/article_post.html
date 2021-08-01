@@ -30,6 +30,21 @@
               <hr>
               <p id='postDetails'>by <span id='articleAuthor'>{{ my_article_contents.postAuthor }}</span> <span id='postedDate1'>Posted on <span id=postedDate2>{{ my_article_contents.postPublishDate }}</span> </span> </p>
               <hr>
+              {% if my_article_contents.previous_article_id or my_article_contents.next_article_id %}
+                <h6>
+                  {% if my_article_contents.previous_article_id %}
+                    <span id="{{my_article_contents.previous_article_id}}"><a href="/tutorials/get_article_contents/?article_primary_id={{my_article_contents.previous_article_id}}"><i class="fas fa-angle-double-left"></i> {{my_article_contents.previous_article_title}}</a></span>
+                  {% else %}
+                    <span>No Previous Tutorial</span>
+                  {% endif %}
+                  {% if my_article_contents.next_article_id %}
+                    <span class="float-right" id="{{my_article_contents.next_article_id}}"><a href="/tutorials/get_article_contents/?article_primary_id={{my_article_contents.next_article_id}}">{{my_article_contents.next_article_title}} <i class="fas fa-angle-double-right"></i></a></span>
+                  {% else %}
+                    <span class="float-right">No Next Tutorial</span>
+                  {% endif %}
+                </h6>
+                <hr>
+              {% endif %}
             </div>
 
             <div class="articleImage">
@@ -44,7 +59,26 @@
               <hr>
                 {{ my_article_contents.content|safe }}
               <hr>
-              <h6> Further Read : <a href="#">Google</a>, <a href="#">Android</a>, <a href="#">Iphone 11</a>, <a href="#">Bushy Brow</a>.</h6>
+              <h6>
+                {% if my_article_contents.previous_article_id or my_article_contents.next_article_id %}
+                  {% if my_article_contents.previous_article_id %}
+                    <span><a href="/tutorials/get_article_contents/?article_primary_id={{my_article_contents.previous_article_id}}"><i class="fas fa-angle-double-left"></i> {{my_article_contents.previous_article_title}}</a></span>
+                  {% else %}
+                    <span>No Previous Tutorial</span>
+                  {% endif %}
+                  {% if my_article_contents.next_article_id %}
+                    <span class="float-right"><a href="/tutorials/get_article_contents/?article_primary_id={{my_article_contents.next_article_id}}">{{my_article_contents.next_article_title}} <i class="fas fa-angle-double-right"></i></a></span>
+                  {% else %}
+                    <span class="float-right">No Next Tutorial</span>
+                  {% endif %}
+                {% else %}
+                  {% if my_article_contents.further_read_article_id %}
+                    Further Read: <a href="/my_notebooks/get_article_contents/?article_primary_id={{my_article_contents.further_read_article_id}}">{{my_article_contents.further_read_article_title}}</i></a>
+                  {% else %}
+                    Further Read: No Articles to read.
+                  {% endif %}
+                {% endif %}
+              </h6>
               <hr>
             </div>
           </div>

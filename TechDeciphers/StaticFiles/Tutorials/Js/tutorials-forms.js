@@ -17,4 +17,15 @@ $(document).ready(function() {
   $('.note-editable').css({'height':'400px','background-color':'white'});
 
   $('.form-datepicker').flatpickr();
+
+  $('#id_isChildPage').change(function() {
+    if($("#id_isChildPage").is(":checked")) {
+      $(".child-tutorial-information").show();
+    }
+    else {
+      $(".child-tutorial-information").hide();
+      $("select.form-control").val(0);
+    }
+  });
+  
 });

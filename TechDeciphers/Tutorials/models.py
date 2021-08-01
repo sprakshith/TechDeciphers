@@ -8,7 +8,11 @@ class Tutorial(models.Model):
     content = models.TextField()
     postAuthor = models.CharField(max_length=40)
     postPublishDate = models.DateField()
-    isPublished = models.BooleanField(default = False)
+    isChildPage = models.BooleanField()
+    parentId = models.IntegerField(default = 0)
+    previousTutorial = models.IntegerField(default = 0)
+    nextTutorial = models.IntegerField(default = 0)
+    isPublished = models.BooleanField(default = True)
 
     def __str__(self):
         return '{} by {}'.format(self.heading, self.postAuthor)
