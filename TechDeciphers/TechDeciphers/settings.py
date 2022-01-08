@@ -90,6 +90,8 @@ WSGI_APPLICATION = 'TechDeciphers.wsgi.application'
 # }
 
 # The Below code is used for MySQL DATABASES - Local Host
+# If the Authentication Issues arises use the below SQL Code to resolve it:
+# ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
@@ -102,6 +104,8 @@ WSGI_APPLICATION = 'TechDeciphers.wsgi.application'
 # }
 
 # The Below code is used for MySQL DATABASES - Sever
+# If the Authentication Issues arises use the below SQL Code to resolve it:
+# ALTER USER 'sprakshith'@'sprakshith.mysql.pythonanywhere-services.com' IDENTIFIED WITH mysql_native_password BY 'techroot';
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
