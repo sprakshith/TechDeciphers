@@ -117,6 +117,8 @@ DATABASES = {
     }
 }
 
+# To Take SQL Backup
+# mysqldump -u sprakshith -h sprakshith.mysql.pythonanywhere-services.com --set-gtid-purged=OFF --no-tablespaces 'sprakshith$techdeciphers' > backup_09012022.sql
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
