@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect
 from django.core.paginator import Paginator
 from Tutorials.form import TutorialForm
 from Tutorials.models import Tutorial
+from django.http import JsonResponse
 
 
 def index(request):
@@ -74,8 +75,36 @@ def get_article_contents(request):
     else:
         return HttpResponseRedirect("/tutorials?article_id=" + article_id)
 
-def get_child_tutorials():
-    tutorials = Tutorial.objects.filter(isChildPage = True).order_by('heading')
+def fetch_previous_next_tutorials(request):
+    parent_article_id = request.GET.get('PARENT_ARTICLE_ID', 0)
+    tutorials = get_child_tutorials(parent_article_id)
+    json_array = get_child_tutorials_as_json(tutorials)
+
+    return JsonResponse({'child_tutorials' : json_array})
+
+def get_child_tutorials_as_json(tutorials):
+    json_array = []
+    for tutorial in tutorials:
+        json_object = {
+                        "TUTORIAL_ID" : tutorial.tutorial_id,
+                        "TUTORIAL_NAME" : tutorial.heading
+                      }
+
+        json_array.append(json_object)
+
+    return json_array
+
+def get_child_tutorials(parent_article_id=0):
+    tutorials = list()
+
+    parent_article_id = int(parent_article_id)
+    if parent_article_id > 0:
+        tutorials = Tutorial.objects.filter(isChildPage = True) \
+                                    .filter(parentId = parent_article_id) \
+                                    .order_by('heading')
+    else:
+        tutorials = Tutorial.objects.filter(isChildPage = True).order_by('heading')
+
     return tutorials
 
 def get_parent_tutorials():

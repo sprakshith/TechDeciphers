@@ -27,5 +27,27 @@ $(document).ready(function() {
       $("select.form-control").val(0);
     }
   });
-  
+
+  $("#select-parent-id").change(function(){
+     $.ajax({
+            type: "GET",
+            url: '/tutorials/fetch_previous_next_tutorials',
+            data: {
+              'PARENT_ARTICLE_ID': $(this).val()
+            },
+            dataType:'json',
+            success: function (data) {
+              $("#select-previous-post-id").html('<option value="0">No Previous Post</option>');
+              $("#select-next-post-id").html('<option value="0">No Next Tutorial</option>');
+
+              var child_tutorials = data.child_tutorials;
+
+              for(var index in child_tutorials) {
+                  var htmlContent = '<option value="'+ child_tutorials[index]["TUTORIAL_ID"] +'">'+ child_tutorials[index]["TUTORIAL_NAME"] +'</option>';
+                  $("#select-previous-post-id, #select-next-post-id").append(htmlContent);
+              }
+            }
+      });
+  });
+
 });

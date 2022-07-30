@@ -67,18 +67,12 @@
                   <label for="select-previous-post-id">Previous Post:</label>
                   <select class="form-control" id="select-previous-post-id" name="previousTutorial">
                     <option value="0">No Previous Post</option>
-                    {% for ct in child_tutorials %}
-                    <option value="{{ct.tutorial_id}}">{{ct.heading}}</option>
-                    {% endfor %}
                   </select>
                 </p>
                 <p>
                   <label for="select-next-post-id">Next Post:</label>
                   <select class="form-control" id="select-next-post-id" name="nextTutorial">
                     <option value="0">No Next Tutorial</option>
-                    {% for ct in child_tutorials %}
-                    <option value="{{ct.tutorial_id}}">{{ct.heading}}</option>
-                    {% endfor %}
                   </select>
                 </p>
               {% else %}
@@ -102,9 +96,11 @@
   </body>
 
   <script type="text/javascript">
+
       $(document).ready(function(){
         $("#id_postAuthor").val("{{request.user.get_full_name}}")
       });
+
   </script>
 
 </html>
