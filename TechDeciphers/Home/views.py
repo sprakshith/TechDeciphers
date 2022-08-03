@@ -10,7 +10,7 @@ def index(request):
     myNotebooks = Notebook.objects.filter(isPublished = True).order_by('-postPublishDate')[:3]
     tutorials = Tutorial.objects.filter(isPublished = True)\
                                 .filter(parentId = 0)\
-                                .order_by('-postPublishDate')[:3]
+                                .order_by('postPublishDate')[:3]
     homeDictionary = {'myNotebooks' : myNotebooks, 'tutorials' : tutorials}
     return render(request, 'Home/home.html', homeDictionary)
 
